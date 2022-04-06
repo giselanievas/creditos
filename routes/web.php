@@ -15,6 +15,7 @@ use \APP\InicioController;
 */
 
 Route::get('/', [App\Http\Controllers\InicioController::class, 'index'])->name('inicio');
+Route::get('/validado', [App\Http\Controllers\InicioController::class, 'validado'])->name('validado')->middleware('auth');
 
 Auth::routes(['verify' => true]);
 
