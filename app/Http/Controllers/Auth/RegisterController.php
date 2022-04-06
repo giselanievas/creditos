@@ -7,7 +7,10 @@ use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use App\Mail\validacion;
+
 
 class RegisterController extends Controller
 {
@@ -29,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::VALIDADO;
+    protected $redirectTo = RouteServiceProvider::REGISTRADO;
 
     /**
      * Create a new controller instance.
@@ -68,14 +71,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
-        return User::create([
+        $user= User::create([
             'name' => $data['name'],
             'concesionaria' => $data['concesionaria'],
             'localidad' => $data['localidad'],
             'telefono' => $data['telefono'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);
+            
+        ]);    
+
+        Mail::to('franputrino@gmail.com')->queue(new validacion($user));
+
+        return $user;
         
     }
+
 }

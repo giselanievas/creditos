@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Session\SessionManager;
 class LoginController extends Controller
 {
     /*
@@ -37,6 +39,24 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        
         $this->middleware('guest')->except('logout');
     }
+   
+    public function login(Request $request, SessionManager $sessionManager){
+         $user = User::where('email',$request->email)->first();
+         
+        
+
+         if($user->confirmed != 1){
+            $sessionManager->flash('msg','La cuenta no fue confirmada');
+             return redirect('/login');
+         }else{
+            $this->middleware('guest')->except('logout');
+            return redirect('/');
+         }
+
+         
+    }
+    
 }
