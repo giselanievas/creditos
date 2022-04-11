@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Session\SessionManager;
 class LoginController extends Controller
 {
@@ -43,20 +44,32 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
    
-    public function login(Request $request, SessionManager $sessionManager){
+       public function login(Request $request, SessionManager $sessionManager){
          $user = User::where('email',$request->email)->first();
-         
         
-
-         if($user->confirmed != 1){
-            $sessionManager->flash('msg','La cuenta no fue confirmada');
-             return redirect('/login');
+         if ($user){
+            if($user->confirmed != 1){
+                $sessionManager->flash('msg','La cuenta no fue confirmada');
+                 return redirect('/login');
+             }else{
+               
+                $this->middleware('guest')->except('logout');
+                if (Auth::attempt(array('email' => $request->email, 'password' => $request->password, 'confirmed' => 1)))
+                {
+                      //  Auth::login($user);
+                      // $sessionManager->flash('msg','validado');
+                       return redirect('/login');
+                       // return redirect('/');
+                } $sessionManager->flash('msg','La clave ingresada es incorrecta');
+                  return redirect('/login');
+               
+             }
          }else{
-            $this->middleware('guest')->except('logout');
-            return redirect('/');
+            $sessionManager->flash('msg','La cuenta no existe');
+            return redirect('/login');
          }
+            
+    }      
 
-         
-    }
     
 }

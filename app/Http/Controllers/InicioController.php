@@ -5,9 +5,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Carbon\Carbon;
+
 class InicioController extends Controller
 {
+
+
     public function index(){
+    
         return view('inicio');
     }
 
