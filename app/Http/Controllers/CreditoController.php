@@ -8,8 +8,9 @@ class CreditoController extends Controller
 {
     public function index(){
         $datos=[];
-        $datos=TipoLinea::all();
-        return view('lineaCreditos.tipoDeLinea',compact('datos'));
+        $datos=TipoLinea::where('baja','=',0)->get();
+        $deBaja=TipoLinea::where('baja','=',1)->get();
+        return view('lineaCreditos.tipoDeLinea',compact('datos','deBaja'));
     }
 
     public function agregar(Request $request){
@@ -20,6 +21,7 @@ class CreditoController extends Controller
          
         $tipoNuevo = new TipoLinea;
         $tipoNuevo->descripcion = $request->descripcion;
+        $tipoNuevo->baja = 0;
 
         $tipoNuevo->save();
 
@@ -46,8 +48,18 @@ class CreditoController extends Controller
     }
     public function eliminar($id){
         $tipoNuevo = TipoLinea::findOrFail($id);
-        $tipoNuevo->delete();
-        return  redirect('/tipodelinea')->with('mensaje', 'Tipo de Linea Eliminada!');
+
+        $tipoNuevo->baja=1;
+        $tipoNuevo->save();
+        return  redirect('/tipodelinea')->with('mensaje', 'Se dio de baja el tipo de  linea');
+
+    }
+    public function habilitar($id){
+        $tipoNuevo = TipoLinea::findOrFail($id);
+
+        $tipoNuevo->baja=0;
+        $tipoNuevo->save();
+        return  redirect('/tipodelinea')->with('mensaje', 'Se habilito el tipo de linea');
 
     }
 

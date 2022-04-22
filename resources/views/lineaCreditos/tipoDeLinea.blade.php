@@ -48,7 +48,7 @@
             <td >
                 <div>
                     <a href="{{route('editarTipoDeLinea', $dato)}}" class="btn btn-warning btn-sm ml-2">Editar</a>   
-                    <a href="{{route('eliminaTipoDeLinear', $dato->id)}}" class="btn btn-danger btn-sm  ml-2">Eliminar</a> 
+                    <a href="{{route('eliminaTipoDeLinear', $dato->id)}}" class="btn btn-danger btn-sm  ml-2">Dar de Baja</a> 
                 </div>
     
 
@@ -56,10 +56,43 @@
           </tr>
         
          @empty
-         <div class="alert alert-secondary text-center container mt-4 mb-5">  No hay datos registrados para mostrar </div>
-           
-         
-       
+         <tr >
+          <th colspan="3">   <div class="alert alert-secondary text-center container mt-4 mb-5">  No hay datos registrados para mostrar </div></th>
+     
+       </tr>
+         @endforelse
+
+    </tbody>
+  </table>
+
+<table class="table table-striped container mt-5">
+    <thead class="text-center">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tipo de Linea dada de Baja</th>
+        <th scope="col" >Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+        @forelse ($deBaja as $dato)
+         <tr >
+            <th scope="row">{{ $dato->id }}</th>
+            <td>{{ $dato->descripcion }}</td>
+            <td >
+                <div>
+                    <a href="{{route('habilitarTipoLinea', $dato)}}" class="btn btn-success btn-sm ml-2">Habilitar</a>   
+                  
+                </div>
+    
+
+            </td>
+          </tr>
+        
+         @empty
+         <tr >
+           <th colspan="3">   <div class="alert alert-secondary text-center container mt-4 mb-5">  No hay datos registrados para mostrar </div></th>
+      
+        </tr>
          @endforelse
 
     </tbody>

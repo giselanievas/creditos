@@ -31,6 +31,7 @@ Route::get('/tipodelinea', [App\Http\Controllers\CreditoController::class, 'inde
 Route::post('/tipodelinea', [App\Http\Controllers\CreditoController::class, 'agregar'])->name('agregarTipoLinea');
 Route::get('/tipodelinea/editar/{id}', [App\Http\Controllers\CreditoController::class, 'editar'])->name('editarTipoDeLinea');
 Route::put('/tipodelinea/editar/{id}', [App\Http\Controllers\CreditoController::class, 'update'])->name('updateTipoDeLinea');
+Route::get('/tipodelinea/habilitar/{id}', [App\Http\Controllers\CreditoController::class, 'habilitar'])->name('habilitarTipoLinea');
 Route::get('/tipodelinea/eliminar/{id}', [App\Http\Controllers\CreditoController::class, 'eliminar'])->name('eliminaTipoDeLinear');
 
 ////////////////////////////////////////////  Linea de creditos /////////////////////////////////////////////////////////////////

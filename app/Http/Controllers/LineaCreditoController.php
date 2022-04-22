@@ -13,7 +13,7 @@ class LineaCreditoController extends Controller
         public function index(){
             $datos=[];
             $datos=lineaCredito::all();
-            $tipoLinea=TipoLinea::all();
+            $tipoLinea=TipoLinea::where('baja','=',0)->get();
             return view('lineaCreditos.lineaCreditos',compact('datos','tipoLinea'));
         }
     
@@ -45,8 +45,8 @@ class LineaCreditoController extends Controller
         }
         public function editar($id){
             $dato =lineaCredito::findOrFail($id);
-            $tipoLinea=TipoLinea::where('id','!=',$dato->TipoLinea_id);
-            dd($tipoLinea);
+            $tipoLinea=TipoLinea::where('id','!=',$dato->tipoLinea_id)->get();
+           
             return view('lineaCreditos.editarLineaCredito', compact('dato','tipoLinea'));
     
         }

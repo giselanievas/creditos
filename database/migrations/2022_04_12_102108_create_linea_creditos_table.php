@@ -16,6 +16,7 @@ class CreateLineaCreditosTable extends Migration
         Schema::create('tipo_lineas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('descripcion');
+            $table->boolean('baja');
             $table->timestamps();
         });
 
