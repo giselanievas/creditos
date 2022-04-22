@@ -16,7 +16,12 @@
             </ul>
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('lineaCredito') }}">ABM de Linea de linea</a>
+                    <a class="nav-link" href="{{ route('lineaCredito') }}">ABM de Linea de crédito</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('detalleLineaCredito') }}">ABM de Detalle de Linea de crédito</a>
                 </li>
             </ul>
 

@@ -6,6 +6,12 @@
 </div>
 <hr class="container">
 <div class="container">
+  <ul>
+    @foreach ($errors->all() as $error)
+        <li class="alert alert-danger alert-dismissible fade show " role="alert">{{ $error }} </li>
+
+    @endforeach
+   </ul>
     <form action="{{ route('updateLinea' ,$dato->id)}}" method="POST" class="row" >
         @method('PUT')
         @csrf
@@ -21,7 +27,7 @@
 
            <label for="" class="p-0 mb-1">¿Tipo de Crédito?</label>
              <select class="form-control mb-2" name="tipoDeLinea">
-                 <option value={{ $dato->TipoLinea_id }}>{{ $dato->tipoDeCredito->descripcion }}</option>
+                 <option  selected='true' value={{ $dato->tipoLinea_id }}>{{ $dato->tipoDeCredito->descripcion }}</option>
                @forelse ($tipoLinea as $item)
                    <option value={{ $item->id }}>{{ $item->descripcion }}</option>
                @empty

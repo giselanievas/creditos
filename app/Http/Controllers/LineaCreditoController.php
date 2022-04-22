@@ -13,11 +13,17 @@ class LineaCreditoController extends Controller
         public function index(){
             $datos=[];
             $datos=lineaCredito::all();
-            $tipoLinea=TipoLinea::where('baja','=',0)->get();
-            return view('lineaCreditos.lineaCreditos',compact('datos','tipoLinea'));
+         
+            return view('lineaCreditos.lineaCreditos',compact('datos'));
         }
     
-        public function agregar(Request $request){
+        public function agregar(){
+            $tipoLinea=TipoLinea::where('baja','=',0)->get();
+            return view('lineaCreditos.crearLineaCredito', compact('tipoLinea'));
+        }
+
+
+        public function guardar(Request $request){
             $usuario =auth()->user()->id;
            
             $min=intval($request['aDesde']) + 1;
@@ -51,7 +57,7 @@ class LineaCreditoController extends Controller
     
         }
         public function update(Request $request, $id){
-
+            
             $usuario =auth()->user()->id;
             $min=intval($request['aDesde']) + 1;
             $request->validate([
