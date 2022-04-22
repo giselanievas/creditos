@@ -15,7 +15,7 @@ class CreateDetalleLineaCreditosTable extends Migration
     {
         Schema::create('detalle_linea_creditos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('LineaCredito_ID'); // Relación con tipo de linea
+            $table->unsignedInteger('LineaCredito_ID'); // Relación con  linea de credito
             $table->double('coeficienteDesde',6,2);
             $table->double('coeficienteHasta',6,2);
             $table->boolean('baja');

@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class LineaCredito extends Model
 {
     use HasFactory;
-    public function detalleCredito(){
 
-        return $this->belongsTo(DetalleLineaCredito::class);
+    public function tipoDeCredito(){
+       return $this->hasOne('App\Models\TipoLinea','id','tipoLinea_id');
     }
 
   

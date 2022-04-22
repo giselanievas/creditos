@@ -13,15 +13,26 @@ class CreateLineaCreditosTable extends Migration
      */
     public function up()
     {
+        Schema::create('tipo_lineas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('descripcion');
+            $table->timestamps();
+        });
+
+
         Schema::create('linea_creditos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('TipoLinea_id'); // Relación con tipo de linea
+            $table->unsignedBigInteger('tipoLinea_id'); // Relación con tipo de linea
+          
             $table->string('descripcion');
             $table->integer('añoDesde');
             $table->integer('añoHasta');
             $table->unsignedInteger('Usuario_id'); // Relación con tipo de usuario
             $table->boolean('baja');
             $table->timestamps();
+        });
+        Schema::table('linea_creditos', function (Blueprint $table) {
+             $table->foreign('tipoLinea_id')->references('id')->on('tipo_lineas');
         });
     }
 
@@ -33,5 +44,6 @@ class CreateLineaCreditosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('linea_creditos');
+        Schema::dropIfExists('tipo_lineas');
     }
 }

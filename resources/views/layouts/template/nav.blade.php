@@ -14,6 +14,11 @@
                     <a class="nav-link" href="{{ route('tipoLineaCredito') }}">Tipo de Linea</a>
                 </li>
             </ul>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('lineaCredito') }}">ABM de Linea de linea</a>
+                </li>
+            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">

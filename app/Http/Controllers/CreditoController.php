@@ -33,7 +33,10 @@ class CreditoController extends Controller
 
     }
     public function update(Request $request, $id){
-        
+        $request->validate([
+            
+            'descripcion' => 'required'
+        ]);
         $tipoNuevo = TipoLinea::find($id);
         $tipoNuevo->descripcion = $request->descripcion;
 

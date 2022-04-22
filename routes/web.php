@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use \APP\InicioController;
 use \APP\CreditoContoller;
+use \APP\LineaCreditoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +25,16 @@ Route::get('/registrado', [App\Http\Controllers\InicioController::class, 'regist
 Route::get('/validar/{id}', [App\Http\Controllers\InicioController::class, 'validar'])->name('validarEmail');
 Route::get('/validado', [App\Http\Controllers\InicioController::class, 'validado'])->name('validado');
 
-//////////////////////////////////////////// linea de creditos /////////////////////////////////////////////////////////////////
+////////////////////////////////////////////  Tipo  de linea de creditos /////////////////////////////////////////////////////////////////
 
 Route::get('/tipodelinea', [App\Http\Controllers\CreditoController::class, 'index'])->name('tipoLineaCredito');
 Route::post('/tipodelinea', [App\Http\Controllers\CreditoController::class, 'agregar'])->name('agregarTipoLinea');
 Route::get('/tipodelinea/editar/{id}', [App\Http\Controllers\CreditoController::class, 'editar'])->name('editarTipoDeLinea');
 Route::put('/tipodelinea/editar/{id}', [App\Http\Controllers\CreditoController::class, 'update'])->name('updateTipoDeLinea');
 Route::get('/tipodelinea/eliminar/{id}', [App\Http\Controllers\CreditoController::class, 'eliminar'])->name('eliminaTipoDeLinear');
+
+////////////////////////////////////////////  Linea de creditos /////////////////////////////////////////////////////////////////
+Route::get('/lineacredito', [App\Http\Controllers\LineaCreditoController::class, 'index'])->name('lineaCredito');
+Route::post('/lineacredito', [App\Http\Controllers\LineaCreditoController::class, 'agregar'])->name('agregarLineaCredito');
+Route::get('/lineacredito/editar/{id}', [App\Http\Controllers\LineaCreditoController::class, 'editar'])->name('editarLinea');
+Route::put('/lineacredito/editar/{id}', [App\Http\Controllers\LineaCreditoController::class, 'update'])->name('updateLinea');

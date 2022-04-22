@@ -8,8 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class TipoLinea extends Model
 {
     use HasFactory;
-    public function tipoLinea(){
 
-        return $this->belongsTo(LineaCredito::class);
-    }
 }
