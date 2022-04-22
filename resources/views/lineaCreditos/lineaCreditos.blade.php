@@ -7,8 +7,6 @@
 <hr class="container">
 <div class="container">
 
-
-
      <a href="{{ route('agregarLineaCredito') }}" class="btn btn-primary row container m-auto">Agregar Linea de Crédito</a>
 </div>
 

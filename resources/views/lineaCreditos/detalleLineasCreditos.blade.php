@@ -6,6 +6,10 @@
 </div>
 <hr class="container">
 <div class="container">
+   @if ( session('mensaje') )
+      <div class="alert alert-success text-center">{{ session('mensaje') }}</div>
+   @endif
+
     <a href="{{ route('agregarDetalleLinea') }}" class="btn btn-primary row container m-auto">Agregar Detalle de Linea de Crédito</a> 
 </div>
 

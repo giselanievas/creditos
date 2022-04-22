@@ -8,9 +8,8 @@ class CreditoController extends Controller
 {
     public function index(){
         $datos=[];
-        $datos=TipoLinea::where('baja','=',0)->get();
-        $deBaja=TipoLinea::where('baja','=',1)->get();
-        return view('lineaCreditos.tipoDeLinea',compact('datos','deBaja'));
+        $datos=TipoLinea::all();
+        return view('lineaCreditos.tipoDeLinea',compact('datos'));
     }
 
     public function agregar(Request $request){
