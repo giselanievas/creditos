@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
+
+use Illuminate\Routing\UrlGenerator;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,7 +25,6 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    use Illuminate\Routing\UrlGenerator;
     public function boot(UrlGenerator $url)
     { 
         if (env('REDIRECT_HTTPS')) {
