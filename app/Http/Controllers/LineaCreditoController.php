@@ -51,7 +51,8 @@ class LineaCreditoController extends Controller
         }
         public function editar($id){
             $dato =lineaCredito::findOrFail($id);
-            $tipoLinea=TipoLinea::where('id','!=',$dato->tipoLinea_id)->get();
+            $tipoLinea=TipoLinea::where('id','!=',$dato->tipoLinea_id)
+                                  ->Where('baja','=',0)->get();
            
             return view('lineaCreditos.editarLineaCredito', compact('dato','tipoLinea'));
     

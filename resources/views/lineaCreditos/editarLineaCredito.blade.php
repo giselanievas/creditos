@@ -32,7 +32,8 @@
                    <option value={{ $item->id }}>{{ $item->descripcion }}</option>
                @empty
              </select>
-
+                 <label class="p-0 mb-1">No se encuentran registros disponibles</label>
+                 <a href="{{ route('tipoLineaCredito')}}" class="btn btn-primary btn-sm mb-2">Agregar Tipo de Crédito</a>
                @endforelse
              </select>
 
