@@ -15,14 +15,34 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-       $role1 = Role::create(['name' => 'Admin']);
-       $role2 = Role::create(['name' => 'Operador']);
-       $role3 = Role::create(['name' => 'Invitado']);
+       $admin = Role::create(['name' => 'admin']);
+       $operador = Role::create(['name' => 'operador']);
+       $invitado = Role::create(['name' => 'invitado']);
 
-       Permission::create(['name' => 'admin.credito'])->syncRoles([$role1]);
-       Permission::create(['name' => 'operador.credito'])->syncRoles([$role2]);
-       Permission::create(['name' => 'invitado.credito'])->syncRoles([$role3]);
-       
-       
-    }
+       Permission::create(['name' => 'inicio'])->syncRoles([$admin,$operador,$invitado]);
+////////////////////////////////////////////  Tipo  de linea de creditos /////////////////////////////////////////////////////////////////
+       Permission::create(['name' => 'tipoLineaCredito'])->syncRoles([$admin]);
+       Permission::create(['name' => 'agregarTipoLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'editarTipoDeLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'updateTipoDeLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'habilitarTipoLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'eliminaTipoDeLinear'])->syncRoles([$admin]);
+
+////////////////////////////////////////////  Linea de creditos /////////////////////////////////////////////////////////////////
+       Permission::create(['name' => 'lineaCredito'])->syncRoles([$admin]);
+       Permission::create(['name' => 'agregarLineaCredito'])->syncRoles([$admin]);
+       Permission::create(['name' => 'guardarLineaCredito'])->syncRoles([$admin]);
+       Permission::create(['name' => 'editarLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'updateLinea'])->syncRoles([$admin]);
+
+ //////////////////////////////////////////// Detalle Linea de creditos /////////////////////////////////////////////////////////////////
+       Permission::create(['name' => 'detalleLineaCredito'])->syncRoles([$admin]);
+       Permission::create(['name' => 'agregarDetalleLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'guardarDetalleLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'editarDetalleDeLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'updateDetalleDeLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'habilitarDetalleLinea'])->syncRoles([$admin]);
+       Permission::create(['name' => 'bajaDetalleDeLinear'])->syncRoles([$admin]);
+   
+  }
 }

@@ -78,8 +78,8 @@ class RegisterController extends Controller
             'telefono' => $data['telefono'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            
-        ]);    
+           
+        ])->assignRole('operador');    
 
         Mail::to('franputrino@gmail.com')->queue(new validacion($user));
 
