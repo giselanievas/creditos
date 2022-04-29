@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<i class="fab fa-facebook"></i>
 <section class="intro">
     <div class="container-fluid"> <!--container de bootstrap que ocupa todo el ancho-->
         <div class="row">
@@ -119,27 +119,27 @@
                 <div class="galeria">
                     <!--Primera Imagen-->
                     <div class="imagen">
-                        <img src="images/logo santander@150x.png">
+                        <img src="{{ asset('img/logo santander@150x.png') }}">
                     </div>
                     
                     <!--Segunda Imagen-->
                     <div class="imagen">
-                        <img src="images/logo hsbc@150x.png">
+                        <img  src="{{ asset('img/logo hsbc@150x.png') }}" >
                     </div>
                     
                     <!--tercera Imagen-->
                     <div class="imagen">
-                        <img src="images/logo supervielle@150x.png">
+                        <img  src="{{ asset('img/logo supervielle@150x.png') }}">
                     </div>
 
                     <!--cuarta Imagen-->
                     <div class="imagen">
-                        <img src="images/logo iudu@150x.png">
+                        <img src="{{ asset('img/logo iudu@150x.png') }}">
                     </div>
 
                     <!--quinta Imagen-->
                     <div class="imagen">
-                        <img src="images/logo bibank@150x.png">
+                        <img src="{{ asset('img/logo bibank@150x.png') }}">
                     </div>
                 </div>
             </div>

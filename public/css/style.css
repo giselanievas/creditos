@@ -1,0 +1,292 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4vh;
+}
+
+header {
+  background: rgb(80, 20, 120);
+  height: 90px;
+}
+
+h1 {
+  color: rgb(80, 20, 120);
+  text-transform: uppercase;
+  margin-bottom: 5vh;
+}
+
+p {
+  font-weight: 300; /* Light  */
+}
+
+.logo {
+  padding: 20px;
+  width: 220px;
+}
+
+.navbar {
+	margin-top: 0px;
+}
+
+nav ul {
+  float: right;
+  padding: 15px; /*espaciado de la botonera respecto al nav*/
+  margin-right: 0px; /* los botones bien a la derecha*/
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 2.5vh;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 20px; /*espaciado vertical entre los botones*/
+}
+
+.navbar-light .navbar-nav .nav-item{
+  padding-left: 10px;
+}
+
+.navbar-light .navbar-nav .redes .nav-item{
+  padding-left: 5px;
+  margin-top: 0px;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+  color: red;
+  padding-left: 30px;
+}
+
+.navbar-light .navbar-nav button{
+  width: 90%;
+  border-radius: 55px;
+  background-color: #00EBB9;
+}
+
+/* iconos de font awesome*/
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: white;
+  color: rgb(80, 20, 120);
+}
+
+.fa-whatsapp {
+  background: white;
+  color: rgb(80, 20, 120);
+}
+
+.fa-instagram {
+  background: white;
+  color: rgb(80, 20, 120);
+}
+
+/* Esta clase abarca todo el texto de cada seccion */
+.text {
+  margin-top: 15vh; /* para separar cada seccion */
+}
+
+.intro {
+  background: url(../images/fondo-PL.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
+  height: 100vh; /*todo el tamaño de la pantalla*/
+  width: 100%; /*todo el ancho de la pantalla*/
+  background-size: cover;
+}
+
+.intro h1 {
+  font-size: 68px;
+  font-weight: 900; /* black */
+  font-style: italic;
+  display: inline-block;
+  text-transform: capitalize; /*La primera letra en mayusculas*/
+}
+
+.nosotros h1 {
+  display: inline-block;
+}
+
+.beneficios h1 {
+  display: inline-block;
+}
+
+#hombrecito {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/*esta clase la reutilizamos para centrar texto*/
+.centrado {
+  text-align: center;
+  margin-left: 30vh;
+}
+
+/*esta clase la reutilizamos para separar secciones*/
+.espacios {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Todos los elementos de tipo "li" con atributo class="list-beneficio" */
+li.list-beneficio {
+  position: relative;
+  padding: 22px;
+  padding-left: 55px;
+  margin-bottom: 50px;
+  list-style: none;
+  -webkit-box-shadow: 1px 0px 7px -3px rgba(0, 0, 0, 0.54);
+  box-shadow: 1px 0px 7px -3px rgba(0, 0, 0, 0.54);
+  border-radius: 55px;
+}
+
+/* Todos los elementos "p" dentro de un elemento "li" con atributo class="list-beneficio" */
+li.list-beneficio p {
+  margin-bottom: 0px;
+}
+
+li.list-beneficio::before {
+  content: "" !important;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  top: 20%; /*llevo el icono para arriba*/
+  transform: translateY(-50%);
+  left: -2%;
+  position: absolute;
+}
+
+/* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-uno */
+li#beneficio-uno::before {
+  background-image: url(../images/signo-peso.svg);
+}
+
+/* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-dos */
+li#beneficio-dos::before {
+  background-image: url(../images/signo-crecimiento.svg);
+}
+
+/* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-tres */
+li#beneficio-tres::before {
+  background-image: url(../images/signo-conectados.svg);
+}
+
+.card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14) !important;
+  margin: 15px;
+}
+
+.encabezado-card {
+  padding: 10px;
+  align-items: center;
+  background-color: rgb(80, 20, 120);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  font-size: 3vh;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Aplicar estilo a todos los div dentro de galeria-alianzas */
+.galeria > div {
+  max-width: 20%;
+  flex: 1 0 auto;
+  align-items: flex-start;
+}
+.galeria > div img {
+  max-width: 100%;
+  padding: 10px;
+}
+
+.contacto {
+  background: url(../images/fondo-contactos-marca-agua.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
+  height: 100vh; /*todo el tamaño de la pantalla*/
+  width: 100%; /*todo el ancho de la pantalla*/
+  background-size: cover;
+}
+
+.contacto input{
+  width: 90%;
+  border-radius: 55px;
+}
+
+.contacto button{
+  width: 90%;
+  border-radius: 55px;
+  background-color: #00EBB9;
+}
+
+.boton:hover{
+  background: #EBEB6E;
+  color: black;
+  /*border: solid 5px purple;*/
+}
+
+.contacto h1 {
+  color: white;
+}
+
+.contacto p {
+  color: white;
+}
+
+.contacto textarea{
+  width: 90%;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: #00EBB9;
+  color: black;
+  height: 10vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.redes-sociales h2 {
+  font-size: 18px;
+  color: rgb(80, 20, 120);
+  font-weight: 500; /* black */
+  display: inline-block;
+  text-transform: capitalize; /*La primera letra en mayusculas*/
+}
+
+.redes-sociales ul {
+  list-style-type: none;
+  color: black;
+}
+
+.redes-sociales ul li {
+  display: block;
+  font-size: 2vh;
+  color: black;
+}
+
+.fa-facebook {
+  color: black;
+}
+
+.fa-instagram {
+  color: black;
+}
