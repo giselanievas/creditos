@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'Telefono' => '2364335601',
             'confirmed' => 1,
 
-        ])->assignRole('Admin');
+        ])->assignRole('admin');
     }
     
 }

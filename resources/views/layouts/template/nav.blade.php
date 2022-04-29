@@ -9,21 +9,30 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('tipoLineaCredito') }}">Tipo de Linea</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('lineaCredito') }}">ABM de Linea de crédito</a>
-                </li>
-            </ul>
+            @can('tipoLineaCredito')
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('tipoLineaCredito') }}">Tipo de Linea</a>
+                    </li>
+                </ul>
+            @endcan
+            @can('lineaCredito')
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('lineaCredito') }}">ABM de Linea de crédito</a>
+                    </li>
+                </ul> 
+            @endcan
+            @can('detalleLineaCredito')
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('detalleLineaCredito') }}">ABM de Detalle de Linea de crédito</a>
                 </li>
             </ul>
+            @endcan    
+               
+         
+
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
