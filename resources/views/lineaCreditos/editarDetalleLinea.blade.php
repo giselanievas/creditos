@@ -38,10 +38,13 @@
               </select>
 
               <label for="" class="p-0 mb-1">Coeficiente Desde</label>
-              <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" step="any" value={{ $dato->coeficienteDesde }}   name="cDesde" placeholder="Coeficiente Desde">
+              <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" min="0" step="any" value={{ $dato->coeficienteDesde }}   name="coeficienteDesde" placeholder="Coeficiente Desde">
 
               <label for="" class="p-0 mb-1">Coeficiente Hasta</label>
-             <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" step="any" name="cHasta"    value= {{ $dato->coeficienteHasta }}   placeholder="Coeficiente Hasta">
+             <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" min="0" step="any" name="coeficienteHasta"    value= {{ $dato->coeficienteHasta }}   placeholder="Coeficiente Hasta">
+
+             <label for="" class="p-0 mb-1">Cantidad de cuotas</label>
+             <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number"  name="cuota"    value="{{ $dato->cuotas }}"  min="1"  placeholder="Cantidad de cuotas">
 
             <button class="btn btn-success" type="submit">Guardar cambios</button>
         </div>

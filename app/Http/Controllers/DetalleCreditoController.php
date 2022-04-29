@@ -21,19 +21,21 @@ class DetalleCreditoController extends Controller
         return view('lineaCreditos.agregarDetalleLinea', compact('lineaCredito'));
     }
     public function guardar(Request $request){
-        $min=intval($request['cDesde']) + 1;
+        $min=intval($request['coeficienteDesde']) + 1;
         $request->validate([
             
             'LineaCredito' => 'required',
-            'cDesde' => 'required',
-            'cHasta' => 'required |numeric| min:'.$min,
+            'coeficienteDesde' => 'required',
+            'coeficienteHasta' => 'required |numeric| min:'.$min,
+            'cuota' => 'required  | min: 1',
 
         ]);
          
         $DetalleNuevo = new DetalleLineaCredito;
         $DetalleNuevo->lineaCredito_ID = $request->LineaCredito;
-        $DetalleNuevo->coeficienteDesde = $request->cDesde;
-        $DetalleNuevo->coeficienteHasta = $request->cHasta;
+        $DetalleNuevo->coeficienteDesde = $request->coeficienteDesde;
+        $DetalleNuevo->coeficienteHasta = $request->coeficienteHasta;
+        $DetalleNuevo->cuotas = $request->cuota;
         $DetalleNuevo->baja = 0;
 
         $DetalleNuevo->save();
@@ -50,18 +52,20 @@ class DetalleCreditoController extends Controller
 
     }
     public function update(Request $request, $id){
-        $min=intval($request['cDesde']) + 1;
+        $min=intval($request['coeficienteDesde']) + 1;
         $request->validate([
             
             'LineaCredito' => 'required',
-            'cDesde' => 'required',
-            'cHasta' => 'required |numeric| min:'.$min,
+            'coeficienteDesde' => 'required',
+            'coeficienteHasta' => 'required |numeric| min:'.$min,
+            'cuota' => 'required | min: 1',
 
         ]);
         $DetalleNuevo = DetalleLineaCredito::find($id);
         $DetalleNuevo->lineaCredito_ID = $request->LineaCredito;
-        $DetalleNuevo->coeficienteDesde = $request->cDesde;
-        $DetalleNuevo->coeficienteHasta = $request->cHasta;
+        $DetalleNuevo->coeficienteDesde = $request->coeficienteDesde;
+        $DetalleNuevo->coeficienteHasta = $request->coeficienteHasta;
+        $DetalleNuevo->cuotas = $request->cuota;
         $DetalleNuevo->baja = 0;
 
         $DetalleNuevo->save();

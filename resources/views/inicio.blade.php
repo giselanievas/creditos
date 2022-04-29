@@ -216,7 +216,9 @@
         </div>
     </div>
 </section>
-
+<div>
+    <cotizador />
+</div>
 <footer>
     <div class="container-fluid"> <!--container de bootstrap que ocupa todo el ancho-->
         <div class="row">

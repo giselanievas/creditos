@@ -37,10 +37,13 @@
               </select>
 
               <label for="" class="p-0 mb-1">Coeficiente Desde</label>
-              <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" step="any" value="{{ old('cDesde') }}"   name="cDesde" placeholder="Coeficiente Desde">
+              <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number"  min="0" step="any" value="{{ old('cDesde') }}"   name="coeficienteDesde" placeholder="Coeficiente Desde">
 
               <label for="" class="p-0 mb-1">Coeficiente Hasta</label>
-             <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" step="any" name="cHasta"    value="{{ old('cHasta') }}"   placeholder="Coeficiente Hasta">
+             <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number" min="0"  step="any" name="coeficienteHasta"    value="{{ old('cHasta') }}"   placeholder="Coeficiente Hasta">
+   
+             <label for="" class="p-0 mb-1">Cantidad de cuotas</label>
+             <input class=" form-control col-lg-4 col-md-4 col-sm-4 mb-2" type="number"  name="cuota"    value="{{ old('cuota') }}" min="1"  placeholder="Cantidad de cuotas">
 
             <button class="btn btn-success" type="submit">Agregar</button>
         </div>
