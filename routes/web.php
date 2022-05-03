@@ -50,3 +50,7 @@ Route::get('/detalleLinea/editar/{id}', [App\Http\Controllers\DetalleCreditoCont
 Route::put('/detalleLinea/editar/{id}', [App\Http\Controllers\DetalleCreditoController::class, 'update'])->name('updateDetalleDeLinea');
 Route::get('/detalleLinea/habilitar/{id}', [App\Http\Controllers\DetalleCreditoController::class, 'habilitar'])->name('habilitarDetalleLinea');
 Route::get('/detalleLinea/eliminar/{id}', [App\Http\Controllers\DetalleCreditoController::class, 'eliminar'])->name('bajaDetalleDeLinear');
+
+////////////////////////////////////////// cotizado con VUE ///////////////////////////////////////////////////////////////////////////////
+Route::get('/cotizador', [App\Http\Controllers\CotizadorController::class, 'index']);
+Route::get('/cotizador/modelos/{id}', [App\Http\Controllers\CotizadorController::class, 'modelos']);
