@@ -20,6 +20,7 @@
         <th scope="col">Linea de credito</th>
         <th scope="col">Coeficiente Desde</th>
         <th scope="col">Coeficiente Desde</th>
+        <th scope="col">Cantidad de cuotas</th>
         <th scope="col" >Acciones</th>
       </tr>
     </thead>
@@ -30,6 +31,7 @@
             <td>{{ $dato->detalle->descripcion }}</td>
             <td>{{ number_format($dato->coeficienteDesde, 2, ',', '.') }}</td>
             <td>{{ number_format($dato->coeficienteHasta, 2, ',', '.') }}</td>
+            <td>{{ $dato->cuotas }}</td>
             <td >
                 <div>
                     @if ($dato->baja)

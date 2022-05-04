@@ -24,9 +24,11 @@ class LineaCreditoController extends Controller
 
 
         public function guardar(Request $request){
+
             $usuario =auth()->user()->id;
-           
+            
             $min=intval($request['aDesde']) + 1;
+           
             $request->validate([
                 
                 'descripcion' => 'required',
