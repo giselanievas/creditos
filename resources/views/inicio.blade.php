@@ -3,8 +3,6 @@
 @section('content')
 
 
- <div>
-     <cotizador />
- </div>
+
 
 @endsection
