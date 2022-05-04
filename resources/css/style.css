@@ -95,7 +95,7 @@ nav ul li a {
 }
 
 .intro {
-  background: url(../images/fondo-PL.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
+  background: center center fixed; /*la imagen queda fija cuando hacemos scroll*/
   height: 100vh; /*todo el tamaño de la pantalla*/
   width: 100%; /*todo el ancho de la pantalla*/
   background-size: cover;
@@ -166,17 +166,17 @@ li.list-beneficio::before {
 
 /* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-uno */
 li#beneficio-uno::before {
-  background-image: url(../images/signo-peso.svg);
+  background-image: url(../img/signo-peso.svg);
 }
 
 /* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-dos */
 li#beneficio-dos::before {
-  background-image: url(../images/signo-crecimiento.svg);
+  background-image: url(../img/signo-crecimiento.svg);
 }
 
 /* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-tres */
 li#beneficio-tres::before {
-  background-image: url(../images/signo-conectados.svg);
+  background-image: url(../img/signo-conectados.svg);
 }
 
 .card {
@@ -217,7 +217,7 @@ li#beneficio-tres::before {
 }
 
 .contacto {
-  background: url(../images/fondo-contactos-marca-agua.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
+  background: url(../img/fondo-contactos-marca-agua.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
   height: 100vh; /*todo el tamaño de la pantalla*/
   width: 100%; /*todo el ancho de la pantalla*/
   background-size: cover;

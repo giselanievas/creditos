@@ -1,6 +1,5 @@
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 4vh;
 }
 
 header {
@@ -8,14 +7,15 @@ header {
   height: 90px;
 }
 
-h1 {
+h1, h2, h3, h4 {
   color: rgb(80, 20, 120);
   text-transform: uppercase;
   margin-bottom: 5vh;
 }
 
 p {
-  font-weight: 300; /* Light  */
+  font-weight: 400;
+  /* Light  */
 }
 
 .logo {
@@ -24,13 +24,15 @@ p {
 }
 
 .navbar {
-	margin-top: 0px;
+  margin-top: 0px;
 }
 
 nav ul {
   float: right;
-  padding: 15px; /*espaciado de la botonera respecto al nav*/
-  margin-right: 0px; /* los botones bien a la derecha*/
+  padding: 15px;
+  /*espaciado de la botonera respecto al nav*/
+  margin-right: 0px;
+  /* los botones bien a la derecha*/
 }
 
 nav ul li {
@@ -41,24 +43,25 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 20px; /*espaciado vertical entre los botones*/
+  padding: 20px;
+  /*espaciado vertical entre los botones*/
 }
 
-.navbar-light .navbar-nav .nav-item{
+.navbar-light .navbar-nav .nav-item {
   padding-left: 10px;
 }
 
-.navbar-light .navbar-nav .redes .nav-item{
+.navbar-light .navbar-nav .redes .nav-item {
   padding-left: 5px;
   margin-top: 0px;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link{
+.navbar-light .navbar-nav .nav-item .nav-link {
   color: red;
   padding-left: 30px;
 }
 
-.navbar-light .navbar-nav button{
+.navbar-light .navbar-nav button {
   width: 90%;
   border-radius: 55px;
   background-color: #00EBB9;
@@ -91,22 +94,27 @@ nav ul li a {
 
 /* Esta clase abarca todo el texto de cada seccion */
 .text {
-  margin-top: 15vh; /* para separar cada seccion */
+  margin-top: 15vh;
+  /* para separar cada seccion */
 }
 
 .intro {
-  background: url(../images/fondo-PL.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
-  height: 100vh; /*todo el tamaño de la pantalla*/
-  width: 100%; /*todo el ancho de la pantalla*/
+  background-image: url(../img/fondo-PL.png);
+
+  height: 100vh;
+  /*todo el tamaño de la pantalla*/
+  /*  width: 100%; /*todo el ancho de la pantalla*/
   background-size: cover;
 }
 
 .intro h1 {
   font-size: 68px;
-  font-weight: 900; /* black */
+  font-weight: 900;
+  /* black */
   font-style: italic;
   display: inline-block;
-  text-transform: capitalize; /*La primera letra en mayusculas*/
+  text-transform: capitalize;
+  /*La primera letra en mayusculas*/
 }
 
 .nosotros h1 {
@@ -158,7 +166,8 @@ li.list-beneficio::before {
   height: 60px;
   width: 60px;
   background-size: cover;
-  top: 20%; /*llevo el icono para arriba*/
+  top: 20%;
+  /*llevo el icono para arriba*/
   transform: translateY(-50%);
   left: -2%;
   position: absolute;
@@ -166,17 +175,17 @@ li.list-beneficio::before {
 
 /* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-uno */
 li#beneficio-uno::before {
-  background-image: url(../images/signo-peso.svg);
+  background-image: url(../img/signo-peso.svg);
 }
 
 /* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-dos */
 li#beneficio-dos::before {
-  background-image: url(../images/signo-crecimiento.svg);
+  background-image: url(../img/signo-crecimiento.svg);
 }
 
 /* Aplicar estilo al elemento <li> que tenga un atributo id con valor beneficio-tres */
 li#beneficio-tres::before {
-  background-image: url(../images/signo-conectados.svg);
+  background-image: url(../img/signo-conectados.svg);
 }
 
 .card {
@@ -205,42 +214,47 @@ li#beneficio-tres::before {
   display: flex;
   flex-wrap: wrap;
 }
+
 /* Aplicar estilo a todos los div dentro de galeria-alianzas */
-.galeria > div {
+.galeria>div {
   max-width: 20%;
   flex: 1 0 auto;
   align-items: flex-start;
 }
-.galeria > div img {
+
+.galeria>div img {
   max-width: 100%;
   padding: 10px;
 }
 
 .contacto {
-  background: url(../images/fondo-contactos-marca-agua.png) center center fixed; /*la imagen queda fija cuando hacemos scroll*/
-  height: 100vh; /*todo el tamaño de la pantalla*/
-  width: 100%; /*todo el ancho de la pantalla*/
+  background-image: url(../img/fondo-contactos-marca-agua.png);
+  /*la imagen queda fija cuando hacemos scroll*/
+  height: 100vh;
+  /*todo el tamaño de la pantalla*/
+  width: 100%;
+  /*todo el ancho de la pantalla*/
   background-size: cover;
 }
 
-.contacto input{
+.contacto input {
   width: 90%;
   border-radius: 55px;
 }
 
-.contacto button{
+.contacto button {
   width: 90%;
   border-radius: 55px;
   background-color: #00EBB9;
 }
 
-.boton:hover{
+.boton:hover {
   background: #EBEB6E;
   color: black;
   /*border: solid 5px purple;*/
 }
 
-.contacto h1 {
+.contacto h3 {
   color: white;
 }
 
@@ -248,7 +262,7 @@ li#beneficio-tres::before {
   color: white;
 }
 
-.contacto textarea{
+.contacto textarea {
   width: 90%;
   border-radius: 15px;
 }
@@ -264,14 +278,16 @@ footer {
 }
 
 
-.redes-sociales h2 {
+/* .redes-sociales h2 {
   font-size: 18px;
   color: rgb(80, 20, 120);
-  font-weight: 500; /* black */
+  font-weight: 500;
+  /* black */
   display: inline-block;
-  text-transform: capitalize; /*La primera letra en mayusculas*/
+  text-transform: capitalize;
+  /*La primera letra en mayusculas*/
 }
-
+ */
 .redes-sociales ul {
   list-style-type: none;
   color: black;
@@ -281,8 +297,9 @@ footer {
   display: block;
   font-size: 2vh;
   color: black;
+  font-size: 16px;
 }
-
+ 
 .fa-facebook {
   color: black;
 }
@@ -290,3 +307,11 @@ footer {
 .fa-instagram {
   color: black;
 }
+
+
+.cotizador{
+  background-image: url(../img/fondo-cotizador.png);
+}
+
+
+
