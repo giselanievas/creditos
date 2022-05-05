@@ -181,21 +181,22 @@
                     <div class="col-md-6">  
                         <div class="container py-4">
                         <div class="row">
-                        <form>
+                        <form method="POST" action="{{route('formulario')}}">
+                            @csrf
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="InputNombre" placeholder="Nombre Completo">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Completo" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="InputTelefono" placeholder="Teléfono">
+                                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email"placeholder="Email" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <textarea name='awesome' class="form-control" rows="7" placeholder="Dejanos tu consulta!"></textarea>
+                                    <textarea name='consulta' id="consulta" class="form-control" rows="7" placeholder="Dejanos tu consulta!" required></textarea>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary boton">Enviar</button>

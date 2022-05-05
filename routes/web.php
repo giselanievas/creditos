@@ -54,3 +54,7 @@ Route::get('/detalleLinea/eliminar/{id}', [App\Http\Controllers\DetalleCreditoCo
 ////////////////////////////////////////// cotizado con VUE ///////////////////////////////////////////////////////////////////////////////
 Route::get('/cotizador', [App\Http\Controllers\CotizadorController::class, 'index']);
 Route::post('/cotizador/{id}/{modelo}/{cuotas}', [App\Http\Controllers\CotizadorController::class, 'calculos']);
+
+/////////////////////////////////////////formulario////////////////////////////////////////////////////////////////////////////////////////
+
+Route::post('/formulario', [App\Http\Controllers\FormularioController::class,'store'])->name('formulario');
