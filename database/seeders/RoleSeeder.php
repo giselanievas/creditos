@@ -43,6 +43,7 @@ class RoleSeeder extends Seeder
        Permission::create(['name' => 'updateDetalleDeLinea'])->syncRoles([$admin]);
        Permission::create(['name' => 'habilitarDetalleLinea'])->syncRoles([$admin]);
        Permission::create(['name' => 'bajaDetalleDeLinear'])->syncRoles([$admin]);
-   
+   //////////////////////////////////////////// Cotizador /////////////////////////////////////////////////////////////////
+       Permission::create(['name' => 'cotizador'])->syncRoles([$admin,$operador]);
   }
 }

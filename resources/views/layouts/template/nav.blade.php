@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: rgb(80, 20, 120) ">
+<nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: rgb(80, 20, 120) ">
     <div class="container">
         <a class="navbar-brand  float-left" href="{{ url('/') }}">
             <img src="{{ asset('img/PL isologo encabezado.svg') }} " style="width: 200px;">
@@ -57,7 +57,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" style="color:white" href="{{ route('logout') }}"
+                            <a class="dropdown-item" style="color:rgb(80, 20, 120)" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
