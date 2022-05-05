@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container alert alert-success col-md-12 col-sm-12 col-lg-12 text-center">
-    <h3>Cuenta validada correctamente</h3>  
-    <a href="{{ route('inicio') }}" class="btn btn-primary  btn-sm  float-right">Volver al inicio</a>
+<div style="background-color: rgb(80, 20, 120)" class="container alert  col-md-12 col-sm-12 col-lg-12 text-center">
+    <h3 style="color: white">Cuenta validada correctamente</h3>  
+    <a href="{{ route('inicio') }}" class="btn   btn-sm  float-right rounded-pill col-4 m-auto mt-3" style="background-color: rgb(00, 235, 185); color: white">Volver al inicio</a>
 </div>
 
 
