@@ -242,6 +242,11 @@ li#beneficio-tres::before {
   border-radius: 55px;
 }
 
+  #calcular{
+  background-color: rgb(80, 20, 120) !important;
+  color: white !important;
+}
+
 .contacto button {
   width: 90%;
   border-radius: 55px;
@@ -282,10 +287,10 @@ footer {
   font-size: 18px;
   color: rgb(80, 20, 120);
   font-weight: 500;
-  /* black */
+   black 
   display: inline-block;
   text-transform: capitalize;
-  /*La primera letra en mayusculas*/
+  /*La primera letra en mayusculas
 }
  */
 .redes-sociales ul {

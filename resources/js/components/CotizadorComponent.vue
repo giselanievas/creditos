@@ -1,9 +1,8 @@
 <template>
-    <div class="container">
+    <div class="container mt-3">
         <div class="row justify-content-center">
                  <div>
-                    <h1 class="mb-2">Cotizador</h1>
-                 
+                                  
                     <div v-if="this.errores" class="alert alert-danger text-center">{{this.errormense}}</div>
               
                     <form   @submit.prevent="calcular" >
@@ -44,7 +43,7 @@
 
                                
 
-                                <button class="btn btn-primary mt-4 mb-4" >Calcular</button>
+                                <button id="calcular" class="btn mt-4 mb-4 col-4 m-auto" >Calcular</button>
                         </div> 
                      </div>
                      </form>
@@ -56,7 +55,7 @@
                         </div>
                      </div>
                      <hr>
-                     <div class="container">
+                     <div class="container mb-3">
                         <div class="row">
                             <div class="col-10 text-left">Cuota Máxima:</div>
                             <div class="col-2 d-flex justify-content-end">${{this.cuota_max}}</div>

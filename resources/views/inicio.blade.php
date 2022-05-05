@@ -23,7 +23,7 @@
                 </div>
 
             </div>
-            </div>
+            
         </section>
         <section class="container " id="nosotros">
 
@@ -123,10 +123,13 @@
                                 <p>Accede a la cuota inicial más baja del mercado.</p>
                             </div>
                         </div>
-
+                        <cotizador />
                     </div>
                 </div>
+               
             </div>
+         
+        
         </section>
         <section class="alianzas">
             <div class="container">
