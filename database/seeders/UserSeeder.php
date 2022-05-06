@@ -18,11 +18,22 @@ class UserSeeder extends Seeder
             'email' => 'franputrino@gmail.com',
             'password' => bcrypt('123456789'),
             'concesionaria' => 'Administrador',
-            'Localidad' => 'Junin',
-            'Telefono' => '2364335601',
+            'localidad' => 'Junin',
+            'telefono' => '2364335601',
             'confirmed' => 1,
 
         ])->assignRole('admin');
+
+        User::create([
+            'name' => 'Operador',
+            'email' => 'gnievas@grupojunin.com',
+            'password' => bcrypt('123456789'),
+            'concesionaria' => 'Operador',
+            'localidad' => 'Junin',
+            'telefono' => '2364335601',
+            'confirmed' => 1,
+
+        ])->assignRole('operador');
     }
     
 }
