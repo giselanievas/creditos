@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class=" col-sm-6 col-md-3 float-left">
-                    <img id="autito" src="{{ secure_asset('img/autito.svg') }}">
+                    <img id="autito" src="{{ asset('img/autito.svg') }}">
                 </div>
 
             </div>
@@ -46,7 +46,7 @@
                     <div class="col-md-4">
                         <!--la fila va a tener 3 columnas donde vamos a colocar la imagen-->
                         <div class="hombrecito">
-                            <img id="hombrecito" src="{{ secure_asset('img/hombrecito.png') }}">
+                            <img id="hombrecito" src="{{ asset('img/hombrecito.png') }}">
                         </div>
                     </div>
                 </div>
@@ -144,21 +144,21 @@
             <div class="container">
                 <div class="row py-2">
                     <div class="col-md-2">
-                        <img class="img-fluid py-4" src="{{ secure_asset('img/logo santander@150x.png') }}">
+                        <img class="img-fluid py-4" src="{{ asset('img/logo santander@150x.png') }}">
                     </div>
                     
                     <div class="col-md-2">
-                        <img class="img-fluid" src="{{ secure_asset('img/logo hsbc@150x.png') }}">
+                        <img class="img-fluid" src="{{ asset('img/logo hsbc@150x.png') }}">
                     </div>
                     <div class="col-md-2">
-                        <img class="img-fluid" src="{{ secure_asset('img/logo supervielle@150x.png') }}">
+                        <img class="img-fluid" src="{{ asset('img/logo supervielle@150x.png') }}">
                     </div>
                     <div class="col-md-2">
-                        <img class="img-fluid" src="{{ secure_asset('img/logo iudu@150x.png') }}">
+                        <img class="img-fluid" src="{{ asset('img/logo iudu@150x.png') }}">
                     </div>
                     
                     <div class="col-md-2">
-                        <img class="img-fluid" src="{{ secure_asset('img/logo bibank@150x.png') }}">
+                        <img class="img-fluid" src="{{ asset('img/logo bibank@150x.png') }}">
                     </div>
 
                 </div>
@@ -225,7 +225,7 @@
 
                             <ul>
                                 <li class="nav-item">
-                                    <img src="{{ secure_asset('img/PL isologo contactos.svg') }}">
+                                    <img src="{{ asset('img/PL isologo contactos.svg') }}">
                                 </li>
                                 <br>
                                 <li class="nav-item">

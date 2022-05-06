@@ -21,6 +21,7 @@
     AddType 'text/css; charset=UTF-8' css
 
 </IfModule>
+
 =begin 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
