@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Mail\MensajedeFormulario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 
 class FormularioController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate([
+        $msg = $request->validate([
             
             'nombre' => 'required',
             'email' => 'required',
@@ -16,17 +18,13 @@ class FormularioController extends Controller
             'consulta' => 'required',
      
         ]);
-        
-       
-        dd($request);
-/*         $nombre = $request->input('nombre');
-        $email = $request->input('email');
-        $telefono = $request->input('telefono');
-        $consulta = $request->input('consulta');
 
-        return view('formulario' , [ 'nombre' => $nombre , 'email' =>$email, 'telefono'=> $telefono, 'consulta' => $consulta ]);
-     
-         */
+        Mail::to('giselanievas21@hotmail.com')->send(new MensajedeFormulario($msg));
+
+        return 'Mensaje enviado';
+
+        
+
     }
 }
 

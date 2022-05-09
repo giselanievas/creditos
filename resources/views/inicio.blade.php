@@ -13,9 +13,12 @@
                     <div class="col-8">
                         <br>
                         <h1><br>Abriendo<br>Caminos <br></h1>
-
+                        
                         <h4>Créditos prendarios <br>para autos.<br><br></h4>
 
+                    </div>
+                    <div class="float-left">
+                    <img id="autito" src="{{ asset('img/autito.svg') }}">
                     </div>
                 </div>
                 <div class=" col-sm-6 col-md-3 float-left">

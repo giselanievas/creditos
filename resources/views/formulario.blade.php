@@ -47,13 +47,20 @@ body{
      
     <div class="container">
         <div class="row align-items-center">
-        <h3> Mensaje enviado por: {{$nombre}} </h3>
-        <h3> Teléfono: {{$telefono}} </h3>
-        <h3> Email: {{$email}} </h3>
-        <h3> Detalle de la consulta: {{$consulta}} </h3>
+        <div class="border mb-2" style=" border-color:rgb(80, 20, 120)">
+            <p>Nombre: {{ $msg['nombre'] }}</p>
+            <p>E-Mail: {{ $msg['email'] }}</p>
+            <p>Teléfono: {{ $msg['telefono'] }}</p>
+            <p>Consulta: {{ $msg['consulta'] }}</p>
+         </div>      
+
+       
+
         </div>
     </div>
     </div>
 </body>
 
 </html>
+
+
