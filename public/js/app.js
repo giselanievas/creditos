@@ -5435,7 +5435,6 @@ window.$ = $; ////////////////////////////
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-// scroll up
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
@@ -5460,7 +5459,7 @@ Vue.component('cotizador', (__webpack_require__(/*! ./components/CotizadorCompon
 var app = new Vue({
   el: '#app'
 });
-document.getElementById('button-up').addEventListener("click", scrollUp);
+document.getElementById('button-up').addEventListener("click", scrollUp); //scoll para subir
 
 function scrollUp() {
   var currentScroll = document.documentElement.scrollTop;
@@ -5469,6 +5468,18 @@ function scrollUp() {
     window.scrollTo(0, 0);
   }
 }
+
+buttonUp = document.getElementById('button-up');
+
+window.onscroll = function () {
+  var scroll = document.documentElement.scrollTop;
+
+  if (scroll > 350) {
+    buttonUp.style.transform = "scale(1)";
+  } else {
+    buttonUp.style.transform = "scale(0)";
+  }
+};
 
 /***/ }),
 

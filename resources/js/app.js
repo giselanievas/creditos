@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-// scroll up
+
 
 require('./bootstrap');
 
@@ -34,11 +34,28 @@ const app = new Vue({
     el: '#app',
 });
 document.getElementById('button-up').addEventListener("click",scrollUp);
+
+
+//scoll para subir
 function scrollUp(){
+
     var currentScroll = document.documentElement.scrollTop;
+
     if (currentScroll > 0){
+     
         window.scrollTo(0, 0);
     }
 }
 
+buttonUp = document.getElementById('button-up')
+
+window.onscroll = function(){
+   var scroll = document.documentElement.scrollTop;
+
+   if (scroll > 350){
+      buttonUp.style.transform = "scale(1)";
+   }else{
+      buttonUp.style.transform = "scale(0)";
+   }
+}
 
