@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('lineacreditos.inicioCreditos')
 
-@section('content')
+@section('creditos')
 <div class="container text-center mb-4">
     <h3>Editar  Linea de Creditos </h3>
 </div>

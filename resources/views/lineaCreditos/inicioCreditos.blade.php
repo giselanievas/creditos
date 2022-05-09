@@ -35,11 +35,11 @@
 </head>
 <body>
     <div id="app">
-         @include('layouts.template.nav')
+         @include('layouts.template.navCreditos')
   
 
         <main class="py-4">
-            @yield('content')
+            @yield('creditos')
         </main>
     </div>
 </body>

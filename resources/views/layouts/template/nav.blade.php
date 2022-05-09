@@ -29,7 +29,7 @@
                  @endcan
                  @can('tipoLineaCredito')
                      <li class="nav-item">
-                         <a class="nav-link" href="{{ route('tipoLineaCredito') }}" style="color:white">Parámetros</a>
+                         <a class="nav-link" href="{{ route('lineaCredito') }}" style="color:white">Parámetros</a>
                      </li>
                  @endcan
                 

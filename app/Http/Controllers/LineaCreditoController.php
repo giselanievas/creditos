@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 class LineaCreditoController extends Controller
 {
    
+        public function inicio(){
+            
+            return view('lineaCreditos.inicioCreditos',);
+        }
         public function index(){
             $datos=[];
             $datos=lineaCredito::all();

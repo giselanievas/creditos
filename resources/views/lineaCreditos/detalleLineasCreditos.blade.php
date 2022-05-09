@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('lineacreditos.inicioCreditos')
 
-@section('content')
+@section('creditos')
 <div class="container text-center mb-4">
     <h3>ABM de Detalles Linea de Creditos </h3>
 </div>
@@ -48,7 +48,7 @@
           </tr>
         
          @empty
-         <th colspan="5"> <div class="alert alert-secondary text-center container mt-4 mb-5">  No hay datos registrados para mostrar </div></th>
+         <th colspan="6"> <div class="alert alert-secondary text-center container mt-4 mb-5">  No hay datos registrados para mostrar </div></th>
          @endforelse
 
     </tbody>
