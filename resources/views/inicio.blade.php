@@ -5,6 +5,8 @@
 <body>
     <main>
 
+
+
         <section class="intro">
             <div class="container-flow">
                 <!--container de bootstrap que ocupa todo el ancho-->
@@ -170,7 +172,7 @@
 
 
         </section>
-        <section class="contacto py-4 mt-4">
+        <section class="contacto py-4 mt-4" id="contactanos">
              <div class="container">
                 <div class="row">
                 <div class="col-md-6">
@@ -271,6 +273,10 @@
 
     </main>
 </body>
+
+    <div id="button-up">
+          <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </div>
 
 <footer class="text-center py-3 shadow">
     <div class="container-fluid">

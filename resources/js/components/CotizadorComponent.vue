@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-3">
+    <div class="container mt-3" id="cotizador">
         <div class="row justify-content-center">
                  <div>
                                   

@@ -14,17 +14,17 @@
                     <a class="nav-link" href="/" style="color:white">inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/" style="color:white">Nosotros</a>
+                    <a class="nav-link" href="#nosotros" style="color:white">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/" style="color:white">Beneficios</a>
+                    <a class="nav-link" href="#beneficios" style="color:white">Beneficios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/" style="color:white">Contactanos</a>
+                    <a class="nav-link" href="#contactanos" style="color:white">Contactanos</a>
                 </li>
                 @can('cotizador')   
                     <li class="nav-item">
-                        <a class="nav-link" href="/" style="color:white">Cotizador</a>
+                        <a class="nav-link" href="#cotizador" style="color:white">Cotizador</a>
                     </li>
                  @endcan
                  @can('tipoLineaCredito')

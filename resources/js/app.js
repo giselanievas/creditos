@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+// scroll up
+
 require('./bootstrap');
 
 window.Vue = require('vue').default;
@@ -31,3 +33,12 @@ Vue.component('cotizador', require('./components/CotizadorComponent.vue').defaul
 const app = new Vue({
     el: '#app',
 });
+document.getElementById('button-up').addEventListener("click",scrollUp);
+function scrollUp(){
+    var currentScroll = document.documentElement.scrollTop;
+    if (currentScroll > 0){
+        window.scrollTo(0, 0);
+    }
+}
+
+
