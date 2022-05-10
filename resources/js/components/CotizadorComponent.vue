@@ -43,7 +43,7 @@
 
                                
 
-                                <button id="calcular" class="btn mt-4 mb-4 col-4 m-auto" >Calcular</button>
+                                <button id="calcular" class="btn mt-4 mb-4 col-4 m-auto rounded-pill" >Calcular</button>
                         </div> 
                      </div>
                      </form>

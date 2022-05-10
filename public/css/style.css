@@ -7,11 +7,13 @@ header {
   height: 90px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   color: rgb(80, 20, 120);
   text-transform: uppercase;
   margin-bottom: 5vh;
 }
+
+
 
 p {
   font-weight: 400;
@@ -197,9 +199,9 @@ li#beneficio-tres::before {
   padding: 10px;
   align-items: center;
   background-color: rgb(80, 20, 120);
-  color: white;
   display: flex;
   justify-content: center;
+  text-decoration-color: white !important;
 }
 
 .content {
@@ -295,16 +297,20 @@ footer {
  */
 .redes-sociales ul {
   list-style-type: none;
-  color: black;
+/*   color: black; */
 }
 
 .redes-sociales ul li {
   display: block;
   font-size: 2vh;
-  color: black;
+  /* color: black; */
   font-size: 16px;
+
 }
- 
+
+
+
+
 .fa-facebook {
   color: black;
 }
@@ -317,6 +323,9 @@ footer {
 .cotizador{
   background-image: url(../img/fondo-cotizador.png);
 }
+
+
+
 
 /* boton para ir para arriba*/
 
