@@ -103,12 +103,7 @@ nav ul li a {
 .intro {
   background-image: url(../img/fondo-PL.png);
 
-  /*la imagen queda fija cuando hacemos scroll*/
-  height: 100vh;
-  /*todo el tamaño de la pantalla*/
-  width: 100%;
-  /*todo el ancho de la pantalla*/
-  background-size: cover;
+
 }
 
 

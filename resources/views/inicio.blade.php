@@ -4,7 +4,7 @@
 
 
     
-        <section class="col-12 intro img-responsive py-4 mt-2">
+        <section class="container-fluid col-12 intro py-4 mt-2">
         
             <div class="row">
                 <div class="col-9">
@@ -147,7 +147,11 @@
                                 <p>Accede a la cuota inicial más baja del mercado.</p>
                             </div>
                         </div>
+
+                        @can('cotizador')
                         <cotizador />
+                        @endcan
+                        
                     </div>
                 </div>
 
@@ -173,25 +177,25 @@
                 <div class="container">
                     <div class="row">
                         <div class="row py-2">
-                            <div class="col-1"></div>
-                            <div class="col-md-2">
-                                <img class="img-fluid" src="{{ asset('img/logo santander@150x.png') }}">
+                         
+                            <div class="col-md-2 col-sm-4 m-auto">
+                                <img class="img-fluid " src="{{ asset('img/logo santander@150x.png') }}">
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4 m-auto">
                                 <img class="img-fluid" src="{{ asset('img/logo hsbc@150x.png') }}">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4 m-auto">
                                 <img class="img-fluid" src="{{ asset('img/logo supervielle@150x.png') }}">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4 m-auto">
                                 <img class="img-fluid" src="{{ asset('img/logo iudu@150x.png') }}">
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-4 m-auto">
                                 <img class="img-fluid" src="{{ asset('img/logo bibank@150x.png') }}">
                             </div>
-                            <div class="col-1"></div>
+                          
                         </div>
                     </div>
                 </div>
