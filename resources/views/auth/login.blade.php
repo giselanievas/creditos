@@ -46,29 +46,29 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
+                        <div class="row mb-3 ">
+                            <div class="col-12  ">
+                                
+      
+                                    @if (Route::has('password.request'))
+                                    <a class="btn btn-link col-12 m-auto" style="color: rgb(80, 20, 120)" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                     @endif
+                                
                             </div>
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-12 offset-md-3">
+                            <div class="col-md-12 offset-3">
                                 <button type="submit" style="background-color: rgb(00, 235, 185); color: white" class="btn rounded-pill col-3">
-                                    {{ __('Login') }}
+                                   <strong>{{ __('Login') }}</strong> 
                                 </button>
+                                <a class="btn rounded-pill col-3" style="background-color: rgb(00, 235, 185); color:white" href="{{ route('register') }}">
+                                 <strong>{{ __('Registro') }}</strong>   
+                                </a>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" style="color: rgb(80, 20, 120)" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                       
                             </div>
                         </div>
                     </form>

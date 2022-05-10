@@ -45,11 +45,7 @@
                         </li>
                     @endif
 
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="btn rounded-pill" style="border-color: rgb(00, 235, 185); color:rgb(00, 235, 185);border-width:3px" href="{{ route('register') }}"><strong>{{ __('Registro') }}</strong></a>
-                        </li>
-                    @endif
+   
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
