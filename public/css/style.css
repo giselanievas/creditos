@@ -7,7 +7,7 @@ header {
   height: 90px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: rgb(80, 20, 120);
   text-transform: uppercase;
   margin-bottom: 5vh;
@@ -103,11 +103,19 @@ nav ul li a {
 .intro {
   background-image: url(../img/fondo-PL.png);
 
+  /*la imagen queda fija cuando hacemos scroll*/
   height: 100vh;
   /*todo el tamaño de la pantalla*/
-  /*  width: 100%; /*todo el ancho de la pantalla*/
+  width: 100%;
+  /*todo el ancho de la pantalla*/
   background-size: cover;
 }
+
+
+
+  
+
+
 
 .intro h1 {
   font-size: 68px;
@@ -322,6 +330,10 @@ footer {
 
 .cotizador{
   background-image: url(../img/fondo-cotizador.png);
+}
+
+h5 {
+  color: white;
 }
 
 

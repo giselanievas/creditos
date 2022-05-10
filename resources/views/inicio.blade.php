@@ -2,16 +2,17 @@
 
 @section('content')
 
-<body>
-    <main>
-        <section class="container-fluid intro img-responsive">
+
+    
+        <section class="col-12 intro img-responsive py-4 mt-2">
+        
             <div class="row">
                 <div class="col-9">
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="col-12 ">
                         <div class="container">
                             <div class="row">
-                                <div class="col-2"></div>
-                                <div class="col-6">
+                                <div class="col-2 col-md-1"></div>
+                                <div class="col-6 col-md-4">
                                     <h1><br>Abriendo<br>Caminos <br></h1>
                                     <h4>Créditos prendarios <br>para autos.<br><br></h4>
                                 </div>
@@ -103,7 +104,7 @@
         </div>
 
 
-        <section class="cotizador" id="cotizador">
+        <section class="cotizador img-fluid" id="cotizador">
             <div class="container mb-4">
 
                 <div class="row">
@@ -174,12 +175,10 @@
                         <div class="row py-2">
                             <div class="col-1"></div>
                             <div class="col-md-2">
-                                <img class="img-fluid py-4" src="{{ asset('img/logo santander@150x.png') }}">
+                                <img class="img-fluid" src="{{ asset('img/logo santander@150x.png') }}">
                             </div>
 
                             <div class="col-md-2">
-
-
                                 <img class="img-fluid" src="{{ asset('img/logo hsbc@150x.png') }}">
                             </div>
                             <div class="col-md-2">
@@ -214,7 +213,7 @@
 
 
 
-        <section class="contacto py-4 mt-2">
+        <section class="contacto img-fluid py-4 mt-2 ">
             <div class="container py-4">
                 <div class="row">
                     <div class="col-md-6">
@@ -293,11 +292,13 @@
                                 <div class="seguinos">
                                     <h5>Seguinos</h5>
                                     <ul>
-                                        <li>
-                                            <i class="fab fa-instagram py-2 px-2"> Instagram</i>
+                                    <li>
+                                            <i class="fab fa-instagram py-2 px-2 w3-hover-opacity"> </i>
+                                            <a href="https://www.instagram.com/pl.autocreditos/?hl=es-la" target="_blank" >Instagram</a>
                                         </li>
                                         <li>
-                                            <i class="fab fa-facebook py-2 px-2"> Facebook</i>
+                                            <i class="fab fa-facebook py-2 px-2 w3-hover-opacity"> </i>
+                                            <a href="https://www.facebook.com/pl.autocreditos" target="_blank">Facebook</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -336,8 +337,6 @@
 
         </section>
 
-    </main>
-</body>
 
 <div id="button-up">
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
