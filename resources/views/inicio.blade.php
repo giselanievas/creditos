@@ -121,32 +121,27 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10 card-group">
-                        <div class="card">
-                            <div class="encabezado-card">
-                                <h5>Tasa Fija</h5>
-                            </div>
-                            <div class="content">
-                                <p>En pesos con sistema de Amortización Francés.</p>
-                            </div>
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-primary">
+                          <h5 class="card-title">Primary card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
-                        <div class="card">
-                            <div class="encabezado-card">
-                                <h5>TNA Fija</h5>
-                            </div>
-                            <div class="content">
-                                <p>En pesos con sistema de Amortización Francés.</p>
-                            </div>
+                      </div>
+                      <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-primary">
+                          <h5 class="card-title">Primary card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
-                        <div class="card">
-                            <div class="encabezado-card">
-                                <h5>UVA</h5>
-                            </div>
-                            <div class="content">
-                                <p>Accede a la cuota inicial más baja del mercado.</p>
-                            </div>
+                      </div>
+                      <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body text-primary">
+                          <h5 class="card-title">Primary card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
+                      </div>
 
                         @can('cotizador')
                         <cotizador />
