@@ -101,10 +101,17 @@ nav ul li a {
 }
 
 .intro {
-  background-image: url(../img/fondo-PL.png);
-
+  background: url(../img/fondo-PL.png);
+ 
+  /*la imagen queda fija cuando hacemos scroll*/
+  height: 100vh;
+  /*todo el tamaño de la pantalla*/
+  width: 100%;
+  /*todo el ancho de la pantalla*/
+  background-size: cove
 
 }
+
 
 
 
@@ -115,11 +122,10 @@ nav ul li a {
 .intro h1 {
   font-size: 68px;
   font-weight: 900;
-  /* black */
   font-style: italic;
   display: inline-block;
   text-transform: capitalize;
-  /*La primera letra en mayusculas*/
+ 
 }
 
 .nosotros h1 {
@@ -198,13 +204,11 @@ li#beneficio-tres::before {
   margin: 15px;
 }
 
-.encabezado-card {
-  padding: 10px;
-  align-items: center;
-  background-color: rgb(80, 20, 120);
-  display: flex;
-  justify-content: center;
-  text-decoration-color: white !important;
+.card-header {
+
+  background-color: rgb(80, 20, 120) !important;
+
+
 }
 
 .content {
