@@ -4,9 +4,9 @@
 
 
 
-<section >
+<section class="intro">
     <div>
-        <div class="row intro img-responsive">
+        <div class="row jumbotron fondo-imagen">
         
             <div class="col-9">
                 <div class="col-12 ">

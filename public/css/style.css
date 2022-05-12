@@ -102,13 +102,19 @@ nav ul li a {
 
 .intro {
   background: url(../img/fondo-PL.png);
- 
+  background-repeat: no-repeat;
   /*la imagen queda fija cuando hacemos scroll*/
   height: 100vh;
   /*todo el tamaño de la pantalla*/
   width: 100%;
   /*todo el ancho de la pantalla*/
-  background-size: cove
+  background-size: cover;
+
+}
+
+.jumbotron{
+  width: 100%;
+  height: 700px;
 
 }
 
