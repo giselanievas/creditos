@@ -25,6 +25,17 @@ class UserSeeder extends Seeder
         ])->assignRole('admin');
 
         User::create([
+            'name' => 'Administrador',
+            'email' => 'plautocreditos@gmail.com',
+            'password' => bcrypt('123456789'),
+            'concesionaria' => 'Administrador',
+            'localidad' => 'Junin',
+            'telefono' => '5491136098552',
+            'confirmed' => 1,
+
+        ])->assignRole('admin');
+
+        User::create([
             'name' => 'Operador',
             'email' => 'gnievas@grupojunin.com',
             'password' => bcrypt('123456789'),
