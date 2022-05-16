@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TipoLinea;
-use App\Models\lineaCredito;    
+use App\Models\LineaCredito;    
 use App\Models\DetalleLineaCredito;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +17,7 @@ class DetalleCreditoController extends Controller
         return view('lineaCreditos.detalleLineasCreditos',compact('datos'));
     }
     public function agregar(){
-        $lineaCredito=lineaCredito::all();
+        $lineaCredito=LineaCredito::all();
         return view('lineaCreditos.agregarDetalleLinea', compact('lineaCredito'));
     }
     public function guardar(Request $request){
@@ -47,7 +47,7 @@ class DetalleCreditoController extends Controller
     public function editar($id){
         
         $dato = DetalleLineaCredito::findOrFail($id);
-        $lineaCredito=lineaCredito::where('id','!=',$dato->lineaCredito_ID)->get();
+        $lineaCredito=LineaCredito::where('id','!=',$dato->lineaCredito_ID)->get();
         return view('lineaCreditos.editarDetalleLinea', compact('dato','lineaCredito'));
 
     }

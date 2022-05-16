@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TipoLinea;
-use App\Models\lineaCredito;
+use App\Models\LineaCredito;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 class LineaCreditoController extends Controller
@@ -16,7 +16,7 @@ class LineaCreditoController extends Controller
         }
         public function index(){
             $datos=[];
-            $datos=lineaCredito::all();
+            $datos=LineaCredito::all();
          
             return view('lineaCreditos.lineaCreditos',compact('datos'));
         }
@@ -42,7 +42,7 @@ class LineaCreditoController extends Controller
                 
             ]);
              
-            $lineaNueva = new lineaCredito;
+            $lineaNueva = new LineaCredito;
             $lineaNueva->descripcion = $request->descripcion;
             $lineaNueva->TipoLinea_id=$request->tipoDeLinea;
             $lineaNueva->Usuario_id= $usuario;
@@ -56,7 +56,7 @@ class LineaCreditoController extends Controller
     
         }
         public function editar($id){
-            $dato =lineaCredito::findOrFail($id);
+            $dato =LineaCredito::findOrFail($id);
             $tipoLinea=TipoLinea::where('id','!=',$dato->tipoLinea_id)
                                   ->Where('baja','=',0)->get();
            
@@ -76,7 +76,7 @@ class LineaCreditoController extends Controller
                 
             ]);
             
-            $lineaNueva = lineaCredito::find($id);
+            $lineaNueva = LineaCredito::find($id);
             $lineaNueva->descripcion = $request->descripcion;
             $lineaNueva->TipoLinea_id=$request->tipoDeLinea;
             $lineaNueva->Usuario_id= $usuario;

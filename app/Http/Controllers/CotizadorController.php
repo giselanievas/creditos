@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TipoLinea;
 use App\Models\DetalleLineaCredito;
-use App\Models\lineaCredito;
+use App\Models\LineaCredito;
 class CotizadorController extends Controller
 {
     public function index(){
@@ -17,7 +17,7 @@ class CotizadorController extends Controller
          
  
 
-       $linea = lineaCredito::select('id')->Where([
+       $linea = LineaCredito::select('id')->Where([
            ['tipoLinea_id',$id],
            ['añoDesde','<=',$modelo],
            ['añoHasta','>=',$modelo]
