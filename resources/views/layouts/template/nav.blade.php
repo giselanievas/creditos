@@ -40,7 +40,13 @@
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
-                        <li class="nav-item">
+                    <li> <a class="fab fa-whatsapp py-2 px-2  rounded-circle nav-item m-1" href="#seguinos"></a></li>
+                    <li><a class="fab fa-facebook py-2 px-2 w3-hover-opacity rounded-circle nav-item m-1" href="https://www.facebook.com/pl.autocreditos" target="_blank"></a></li>
+                    <li> <a class="fab fa-instagram py-2 px-2 w3-hover-opacity rounded-circle nav-item m-1" href="https://www.instagram.com/pl.autocreditos/?hl=es-la" target="_blank"></a></li>
+                    <li class="nav-item">
+                           
+                            
+                           
                             <a class="btn rounded-pill" style="border-color: rgb(00, 235, 185); color:rgb(00, 235, 185); border-width:3px" href="{{ route('login') }}"><strong>Acceder</strong></a>
                         </li>
                     @endif
