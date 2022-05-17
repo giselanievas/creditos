@@ -114,7 +114,9 @@ nav ul li a {
 
 .jumbotron{
   width: 100%;
-  height: 700px;
+  height: 1000px;
+
+
 
 }
 
@@ -369,4 +371,27 @@ h5 {
 #button-up:hover{
   transform: scale(1.1);
   border-color: rgba(0,0,0,0.1);
+}
+
+
+
+
+#ingreso {
+  /* background: url("../img/fondo-PL.png"); */
+  background-color: purple;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+ 
+  width: 100%;
+ 
+  background-size: cover;
+
+
+}
+
+#ingreso h3{
+  color: white;
+  font-style: black italic;
+
 }

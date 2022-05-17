@@ -121,7 +121,7 @@
             </div>
         </div>
 
-        <div class=" container-fluid row cotizador mb-4">
+        <div class=" container-fluid row mb-4">
             <div class="card mb-3 m-auto" style="max-width: 18rem;">
                 <div class="card-header text-center">
                     <h5>Tasa Fija</h5>
