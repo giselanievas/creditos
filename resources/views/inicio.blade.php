@@ -293,7 +293,7 @@
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-3">
-                        <div class="seguinos">
+                        <div class="seguinos" id="seguinos">
                             <h5>Seguinos</h5>
                             <ul>
                                 <li>
