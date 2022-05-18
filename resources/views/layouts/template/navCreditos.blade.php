@@ -11,7 +11,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('inicio') }}" style="color:white">inicio</a>
+                    <a class="nav-link" href="{{ route('ingreso') }}" style="color:white">inicio</a>
                 </li>
             </ul>   
             <ul class="navbar-nav me-auto">

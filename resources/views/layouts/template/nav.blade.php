@@ -1,8 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: rgb(80, 20, 120) ">
     <div class="container">
+        @can('cotizador')
+        <a class="navbar-brand  float-left" href="{{ url('/ingreso') }}">
+            <img src="{{ asset('img/PL isologo encabezado.svg') }} " style="width: 200px;">
+        </a>
+        @endcan
+
+        @if(auth()->user() == false )
         <a class="navbar-brand  float-left" href="{{ url('/') }}">
             <img src="{{ asset('img/PL isologo encabezado.svg') }} " style="width: 200px;">
         </a>
+        @endif
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,9 +18,18 @@
         <div class="collapse navbar-collapse "  id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav m-auto">
+                @can('cotizador')
                 <li class="nav-item">
-                    <a class="nav-link" href="/" style="color:white">inicio</a>
+                    <a class="nav-link" href="/ingreso" style="color:white">inicio</a>
                 </li>
+                @endcan
+                @if(auth()->user() == false )
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="color:white">inicio</a>
+                    </li>
+                @endif
+ 
+               
                 <li class="nav-item">
                     <a class="nav-link" href="#nosotros" style="color:white">Nosotros</a>
                 </li>
