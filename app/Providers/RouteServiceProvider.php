@@ -18,6 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/';
+    public const LOGUEADO = '/ingreso';
     public const VALIDADO = '/validado';
     public const REGISTRADO = '/registrado';
 

@@ -64,4 +64,4 @@ Route::post('/formulario', [App\Http\Controllers\FormularioController::class,'st
 
 //////////////////////////////////////////////Ingreso Logueado///////////////////////////////////////////////////////////////////////////////
 
-Route::get('/ingreso', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingreso')->middleware('auth');
+Route::get('/ingreso', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingreso');

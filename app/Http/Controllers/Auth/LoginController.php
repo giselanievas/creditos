@@ -29,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::LOGUEADO;
 
 
     /**
@@ -58,7 +58,7 @@ class LoginController extends Controller
                 {
                       //  Auth::login($user);
                       // $sessionManager->flash('msg','validado');
-                       return redirect('/login');
+                       return redirect('/ingreso');
                        // return redirect('/');
                 } $sessionManager->flash('msg','La clave ingresada es incorrecta');
                   return redirect('/login');
