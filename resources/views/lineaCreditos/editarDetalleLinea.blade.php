@@ -23,6 +23,9 @@
             @if ( session('mensaje') )
               <div class="alert alert-success text-center">{{ session('mensaje') }}</div>
              @endif
+            @if ( session('existe') )
+              <div class="alert alert-danger text-center">{{ session('existe') }}</div>
+             @endif
 
 
             <label for="" class="p-0 mb-1">¿Linea de Crédito?</label>

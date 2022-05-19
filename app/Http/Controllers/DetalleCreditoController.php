@@ -22,6 +22,16 @@ class DetalleCreditoController extends Controller
     }
     public function guardar(Request $request){
         $min=intval($request['coeficienteDesde']) + 1;
+
+        /// control para saber si ya esta cargada la linea de credito /////////////
+            $control_detalle=DetalleLineaCredito:: where('lineaCredito_ID',$request->LineaCredito)
+                    ->where('cuotas',$request->cuota)
+                    ->get() ;
+            
+            if($control_detalle->isEmpty() == false){
+                   return redirect('/detalleLinea/agregar')->with('existe', 'El detalle que desea cargar ya existe');
+            }
+        ///////////////////////////////////////////////////////////////////////////
         $request->validate([
             
             'LineaCredito' => 'required',
@@ -53,6 +63,16 @@ class DetalleCreditoController extends Controller
     }
     public function update(Request $request, $id){
         $min=intval($request['coeficienteDesde']) + 1;
+
+ /// control para saber si ya esta cargada la linea de credito /////////////
+        $control_detalle=DetalleLineaCredito:: where('lineaCredito_ID',$request->LineaCredito)
+                                               ->where('cuotas',$request->cuota)
+                                               ->get() ;
+        if($control_detalle->isEmpty() == false){
+            return redirect()->to(route('editarDetalleDeLinea',['id'=>$id]))->with('existe', 'La datos que desea modificar ya existen en otro detalle');
+        } 
+///////////////////////////////////////////////////////////////////////////
+
         $request->validate([
             
             'LineaCredito' => 'required',
