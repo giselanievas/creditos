@@ -17,6 +17,9 @@
             @if ( session('mensaje') )
               <div class="alert alert-success text-center">{{ session('mensaje') }}</div>
              @endif
+            @if ( session('existe') )
+              <div class="alert alert-danger text-center">{{ session('existe') }}</div>
+             @endif
 
             <input class="form-control col-lg-8 col-md-8 col-sm-12 mb-2" type="text" name="descripcion" placeholder="Ingrese Descripcíon" value={{ old('descripcion') }}>
 

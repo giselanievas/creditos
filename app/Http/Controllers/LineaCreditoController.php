@@ -32,7 +32,15 @@ class LineaCreditoController extends Controller
             $usuario =auth()->user()->id;
             
             $min=intval($request['aDesde']) + 1;
-           
+            /// control para saber si ya esta cargada la linea de credito /////////////
+            $control_lineas=LineaCredito:: where('TipoLinea_id',$request->tipoDeLinea)
+                                          ->where('añoDesde',"<=",$request->aHasta)
+                                          ->where('añoHasta','>=',$request->aDesde)
+                                         ->get() ;
+            if($control_lineas->isEmpty() == false){
+            return redirect('/lineacredito/agregar')->with('existe', 'La Linea que desea cargar ya existe');
+            }
+            ///////////////////////////////////////////////////////////////////////////
             $request->validate([
                 
                 'descripcion' => 'required',
@@ -40,8 +48,9 @@ class LineaCreditoController extends Controller
                 'aDesde' => 'required|integer|between:1990,2050',
                 'aHasta' => 'required |numeric| min:'.$min,
                 
-            ]);
-             
+            ]);            
+          
+            
             $lineaNueva = new LineaCredito;
             $lineaNueva->descripcion = $request->descripcion;
             $lineaNueva->TipoLinea_id=$request->tipoDeLinea;
@@ -67,6 +76,16 @@ class LineaCreditoController extends Controller
             
             $usuario =auth()->user()->id;
             $min=intval($request['aDesde']) + 1;
+            /// control para saber si ya esta cargada la linea de credito /////////////
+            $control_lineas=LineaCredito:: where('TipoLinea_id',$request->tipoDeLinea)
+                                          ->where('id','!=',$id)
+                                          ->where('añoDesde',"<=",$request->aHasta)
+                                          ->where('añoHasta','>=',$request->aDesde)
+                                          ->get() ;
+            if($control_lineas->isEmpty() == false){
+               return redirect()->to(route('editarLinea',['id'=>$id]))->with('existe', 'La datos que desea modificar ya existen en otra linea de credito');
+            }
+            ///////////////////////////////////////////////////////////////////////////
             $request->validate([
                 
                 'descripcion' => 'required',
