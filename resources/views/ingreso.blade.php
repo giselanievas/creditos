@@ -3,14 +3,13 @@
 @section('content')
 <section id="ingreso">
 <div class="jumbotron pb-5">
-<div class="col-3 py-4 float-end">
+    <div class="col-3 py-4 float-end">
                
-               <img id="formas" src="{{ asset('img/formas grandes.svg') }}">
-           </div>
+         <img id="formas" src="{{ asset('img/formas grandes.svg') }}">
+    </div>
 <div class="col-9">
                 <div class="col-12 ">
- 
-                    <div class="container">
+                     <div class="container">
                         <div class="row">
                             <div class="col-2 col-md-1"></div>
                             <div class="col-6 col-md-4">
@@ -24,15 +23,23 @@
                 </div>
                 <div class=" col-sm-3 col-md-4 float-left">
                     <img id="autito" src="{{ asset('img/autito.svg') }}">
+                    <br><br><br>
+                    <div class=" col-sm-5 col-md-6">
+                    <button class="enlace boton-veraz" role="link" onclick="window.location='http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp'" target="_blank"  rel="noopener noreferrer"> Consultar en Veraz</button>
+                    
+                    
                 </div>
+               
             </div>
            
 </div>
+
 
 </section>
 <div class="col-3">
     <img id="formitaVerde" src="{{ asset('img/formita verde.svg') }}">
 </div>
+
  
 
 
@@ -108,77 +115,6 @@
 
 
 
-
-    <section class="redes-sociales py-3 px-3">
-        <div class="container py-2">
-            <div class="row">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="datos">
-
-                                <ul>
-                                    <li class="nav-item">
-                                        <img src="{{ asset('img/PL isologo contactos.svg') }}">
-                                    </li>
-                                    <br>
-                                    <li class="nav-item">
-                                    <li class="far fa-user"> Pablo López</li>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-3">
-                            <div class="seguinos">
-                                <h5>Seguinos</h5>
-                                <ul>
-                                    <li>
-                                        <i class="fab fa-instagram py-2 px-2 w3-hover-opacity"> </i>
-                                        <a href="https://www.instagram.com/pl.autocreditos/?hl=es-la" target="_blank">Instagram</a>
-                                    </li>
-                                    <li>
-                                        <i class="fab fa-facebook py-2 px-2 w3-hover-opacity"> </i>
-                                        <a href="https://www.facebook.com/pl.autocreditos" target="_blank">Facebook</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="contactanos">
-                                <h5>Contactanos</h5>
-                                <ul>
-                                    <li>
-                                        <i class="fab fa-whatsapp py-2 "> 11 3609-8552</i>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-envelope py-2"> plautocreditos@gmail.com</i>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-7">
-                </div>
-                <div class="col-5">
-                    <br>
-                    <img class="float-left " id="lineaVerde" src="{{ asset('img/linea verde.svg') }}">
-                </div>
-            </div>
-        </div>
-
-
-    </section>
 
 
 </section>

@@ -20,12 +20,12 @@
             <ul class="navbar-nav m-auto">
                 @can('cotizador')
                 <li class="nav-item">
-                    <a class="nav-link" href="/ingreso" style="color:white">inicio</a>
+                    <a class="nav-link" href="/ingreso" style="color:white">Inicio</a>
                 </li>
                 @endcan
                 @if(auth()->user() == false )
                     <li class="nav-item">
-                        <a class="nav-link" href="/" style="color:white">inicio</a>
+                        <a class="nav-link" href="/" style="color:white">Inicio</a>
                     </li>
                 @endif
  
