@@ -128,7 +128,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                Copyrigth @ {{date('Y')}} Todos los derechos reservados
+                Copyrigth @ {{date('Y')}} SeederSoftware │ Todos los derechos reservados
             </div>
         </div>
     </div>
