@@ -35,6 +35,15 @@
                      </li>
                  @endcan
             </ul>   
+            <ul class="navbar-nav me-auto">
+                 @can('tipoLineaCredito')
+                     <li class="nav-item">
+                         <a class="nav-link" href="{{ route('grillaDeCredito') }}" style="color:white">Grillas de Créditos</a>
+                     </li>
+                 @endcan
+            </ul>   
+
+
             
 
             <!-- Right Side Of Navbar -->

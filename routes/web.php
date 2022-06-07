@@ -34,6 +34,7 @@ Route::put('/tipodelinea/editar/{id}', [App\Http\Controllers\CreditoController::
 Route::get('/tipodelinea/habilitar/{id}', [App\Http\Controllers\CreditoController::class, 'habilitar'])->name('habilitarTipoLinea');
 Route::get('/tipodelinea/eliminar/{id}', [App\Http\Controllers\CreditoController::class, 'eliminar'])->name('eliminaTipoDeLinear');
 
+
 ////////////////////////////////////////////  Linea de creditos /////////////////////////////////////////////////////////////////
 Route::get('/inicioCreditos', [App\Http\Controllers\LineaCreditoController::class, 'inicio'])->middleware('can:lineaCredito')->name('inicioCreditos');
 Route::get('/lineacredito', [App\Http\Controllers\LineaCreditoController::class, 'index'])->middleware('can:lineaCredito')->name('lineaCredito');
@@ -41,6 +42,10 @@ Route::get('/lineacredito/agregar', [App\Http\Controllers\LineaCreditoController
 Route::post('/lineacredito/agregar', [App\Http\Controllers\LineaCreditoController::class, 'guardar'])->name('guardarLineaCredito');
 Route::get('/lineacredito/editar/{id}', [App\Http\Controllers\LineaCreditoController::class, 'editar'])->name('editarLinea');
 Route::put('/lineacredito/editar/{id}', [App\Http\Controllers\LineaCreditoController::class, 'update'])->name('updateLinea');
+//**********************************Grilla de creditos***********************************************************////
+Route::get('/lineacredito/agregargrilla', [App\Http\Controllers\ImagenesController::class, 'index'])->name('grillaDeCredito');
+Route::post('/lineacredito/guardargrilla', [App\Http\Controllers\ImagenesController::class, 'create'])->name('guardarGrillaDeCredito');
+
 
 
 //////////////////////////////////////////// Detalle Linea de creditos /////////////////////////////////////////////////////////////////

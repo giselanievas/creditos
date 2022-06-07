@@ -22,6 +22,14 @@
                 </div>
                 <div class=" col-sm-6 col-md-4 float-left">
                     <img id="autito" src="{{ asset('img/autito.svg') }}">
+                    <br><br><br>
+                    <div class="container d-flex justify-content-center">
+                          
+                       
+                    <button  class=" boton rounded-pill btn btn-outline-dark">Descargar Grilla</button>
+                  
+                    </div>
+
                 </div>
             </div>
             <div class="col-3  py-4">
