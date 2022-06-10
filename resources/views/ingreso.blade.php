@@ -14,21 +14,23 @@
                             <div class="col-2 col-md-1"></div>
                             <div class="col-6 col-md-4">
                                 
-                                <h3><br>El auto que querés, <br></h3>
-                                <h3>el plan que necesitás.<br><br></h3>
+                                <h1 style="color:white; font-family:Montserrat, sans-serif"><br><b><i>El auto que querés, <br>
+                                 el plan que necesitás.</i></b><br><br></h1>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-                <div class=" col-sm-3 col-md-4 float-left">
+                <div class=" col-sm-3 col-md-4 float-left ml-4">
                     <img id="autito" src="{{ asset('img/autito.svg') }}">
                     <br><br><br>
-                    <div class=" col-sm-5 col-md-6">
-                    <button class="enlace boton-veraz" role="link" onclick="window.location='http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp'" target="_blank"  rel="noopener noreferrer"> Consultar en Veraz</button>
-                    
-                    
-                </div>
+                    <div class="container d-flex justify-content-center">
+                          
+                       
+                    <p><a href="http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp"  class="rounded-pill btn btn-outline-light" type="button" target="_blank">Consultar en Veraz</a>.</p>
+                  
+                    </div>
+              
                
             </div>
            
@@ -41,13 +43,6 @@
 </div>
 
  
-
-
-
-
-
-
-
 <section class="cotizador img-fluid" id="cotizador">
     <div class="col-1">
         <br>

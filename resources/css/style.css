@@ -9,13 +9,14 @@ header {
 }
 
 h1 {
-  color: rgb(80, 20, 120);
+  color:rgb(80, 20, 120);
   text-transform: uppercase;
   margin-bottom: 5vh;
 }
 
 p {
-  font-weight: 300; /* Light  */
+  font-weight: 300; 
+  color: white;
 }
 
 .logo {
@@ -109,6 +110,14 @@ nav ul li a {
   text-transform: capitalize; /*La primera letra en mayusculas*/
 }
 
+.ingreso p{
+  color: white !important;
+  font-size: 68px !important;
+  font-weight: 900 !important; /* black */
+  font-style: italic !important;
+  display: inline-block !important;
+  text-transform: capitalize !important; /*La primera letra en mayusculas*/
+}
 .nosotros h1 {
   display: inline-block;
 }
@@ -290,3 +299,14 @@ footer {
 .fa-instagram {
   color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
