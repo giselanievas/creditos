@@ -12,7 +12,7 @@ class LineaCreditoController extends Controller
    
         public function inicio(){
             
-            return redirect('/inicioCreditos');
+            return view('lineaCreditos.inicioCreditos');
         }
         public function index(){
             $datos=[];
