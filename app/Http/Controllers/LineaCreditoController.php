@@ -18,7 +18,7 @@ class LineaCreditoController extends Controller
             $datos=[];
             $datos=LineaCredito::all();
          
-            return view('lineaCreditos.lineaCreditos',compact('datos'));
+            return \View::make('lineaCreditos/lineaCreditos',compact('datos'));
         }
     
         public function agregar(){
