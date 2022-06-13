@@ -12,7 +12,7 @@ class LineaCreditoController extends Controller
    
         public function inicio(){
             
-            return view('lineacreditos.iniciocreditos');
+            return view('lineacreditos.inicio_creditos');
         }
         public function index(Request $request){
             $datos=[];

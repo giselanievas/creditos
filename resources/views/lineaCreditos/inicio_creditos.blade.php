@@ -2,7 +2,7 @@
 
 @section('contenidoDinamico')
     <div id="app">
-         @include('layouts.template.navCreditos')
+         @include('layouts.template.nav_creditos')
   
 
         <main class="py-4">
