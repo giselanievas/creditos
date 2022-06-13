@@ -14,7 +14,7 @@ class DetalleCreditoController extends Controller
         $datos=[];
         $datos=DetalleLineaCredito::all();
     
-        return view('lineacreditos.detalleLineasCreditos',compact('datos'));
+        return view('linea_creditos.detalleLineasCreditos',compact('datos'));
     }
     public function agregar(){
         $lineaCredito=LineaCredito::all();
@@ -58,7 +58,7 @@ class DetalleCreditoController extends Controller
         
         $dato = DetalleLineaCredito::findOrFail($id);
         $lineaCredito=LineaCredito::where('id','!=',$dato->lineaCredito_ID)->get();
-        return view('lineacreditos.editarDetalleLinea', compact('dato','lineaCredito'));
+        return view('linea_creditos.editarDetalleLinea', compact('dato','lineaCredito'));
 
     }
     public function update(Request $request, $id){
