@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.welcome')
 
 @section('content')
 <div style="background-color: rgb(80, 20, 120)" class="container alert  col-md-12 col-sm-12 col-lg-12 mt-3 text-center">

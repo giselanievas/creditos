@@ -33,9 +33,13 @@ Vue.component('cotizador', require('./components/CotizadorComponent.vue').defaul
 const app = new Vue({
     el: '#app',
 });
-document.getElementById('button-up').addEventListener("click",scrollUp);
 
 
+let botonExiste=document.getElementById('button-up')
+  console.log("es null",botonExiste)
+if(botonExiste){
+    
+    document.getElementById('button-up').addEventListener("click",scrollUp);
 //scoll para subir
 function scrollUp(){
 
@@ -58,4 +62,8 @@ window.onscroll = function(){
       buttonUp.style.transform = "scale(0)";
    }
 }
+
+
+}
+ 
 
