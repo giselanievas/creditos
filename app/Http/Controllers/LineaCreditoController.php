@@ -12,13 +12,13 @@ class LineaCreditoController extends Controller
    
         public function inicio(){
             
-            return view('lineaCreditos.inicioCreditos');
+            return view('lineacreditos.inicioCreditos');
         }
         public function index(Request $request){
             $datos=[];
             $datos=LineaCredito::all();
          
-            return view('lineaCreditos.lineaCreditos',compact('datos'));
+            return view('lineacreditos.lineaCreditos',compact('datos'));
         }
     
         public function agregar(){
