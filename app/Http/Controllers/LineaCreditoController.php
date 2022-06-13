@@ -14,7 +14,7 @@ class LineaCreditoController extends Controller
             
             return view('lineacreditos.inicio_creditos');
         }
-        public function index(Request $request){
+        public function index(){
             $datos=[];
             $datos=LineaCredito::all();
          
