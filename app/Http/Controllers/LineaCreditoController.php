@@ -12,18 +12,18 @@ class LineaCreditoController extends Controller
    
         public function inicio(){
             
-            return view('lineacreditos.inicioCreditos');
+            return view('lineacreditos.iniciocreditos');
         }
         public function index(Request $request){
             $datos=[];
             $datos=LineaCredito::all();
          
-            return view('lineacreditos.lineaCreditos',compact('datos'));
+            return view('lineacreditos.linea_creditos',compact('datos'));
         }
     
         public function agregar(){
             $tipoLinea=TipoLinea::where('baja','=',0)->get();
-            return view('lineaCreditos.crearLineaCredito', compact('tipoLinea'));
+            return view('lineaCreditos.crear_linea_credito', compact('tipoLinea'));
         }
 
 
@@ -69,7 +69,7 @@ class LineaCreditoController extends Controller
             $tipoLinea=TipoLinea::where('id','!=',$dato->tipoLinea_id)
                                   ->Where('baja','=',0)->get();
            
-            return view('lineaCreditos.editarLineaCredito', compact('dato','tipoLinea'));
+            return view('lineacreditos.editar_linea_credito', compact('dato','tipoLinea'));
     
         }
         public function update(Request $request, $id){

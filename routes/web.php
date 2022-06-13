@@ -39,7 +39,7 @@ Route::group(['middleware' => ['cors']], function () {
 
 
         ////////////////////////////////////////////  Linea de creditos /////////////////////////////////////////////////////////////////
-        Route::get('/inicioCreditos', [App\Http\Controllers\LineaCreditoController::class, 'inicio'])->middleware('can:lineaCredito')->name('inicioCreditos');
+        Route::get('/iniciocreditos', [App\Http\Controllers\LineaCreditoController::class, 'inicio'])->middleware('can:lineaCredito')->name('inicioCreditos');
         Route::get('/lineacredito', [App\Http\Controllers\LineaCreditoController::class, 'index'])->middleware('can:lineaCredito')->name('lineaCredito');
         Route::get('/lineacredito/agregar', [App\Http\Controllers\LineaCreditoController::class, 'agregar'])->name('agregarLineaCredito');
         Route::post('/lineacredito/agregar', [App\Http\Controllers\LineaCreditoController::class, 'guardar'])->name('guardarLineaCredito');
