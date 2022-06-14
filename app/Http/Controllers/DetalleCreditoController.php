@@ -14,11 +14,11 @@ class DetalleCreditoController extends Controller
         $datos=[];
         $datos=DetalleLineaCredito::all();
     
-        return view('linea_de_creditos.detalleLineasCreditos',compact('datos'));
+        return view('linea_de_creditos.detalle_lineas_creditos',compact('datos'));
     }
     public function agregar(){
         $lineaCredito=LineaCredito::all();
-        return view('lineaceditos.agregarDetalleLinea', compact('lineaCredito'));
+        return view('linea_de_creditos.agregar_detalle_linea', compact('lineaCredito'));
     }
     public function guardar(Request $request){
         $min=intval($request['coeficienteDesde']) + 1;
@@ -58,7 +58,7 @@ class DetalleCreditoController extends Controller
         
         $dato = DetalleLineaCredito::findOrFail($id);
         $lineaCredito=LineaCredito::where('id','!=',$dato->lineaCredito_ID)->get();
-        return view('linea_de_creditos.editarDetalleLinea', compact('dato','lineaCredito'));
+        return view('linea_de_creditos.editar_detalle_linea', compact('dato','lineaCredito'));
 
     }
     public function update(Request $request, $id){

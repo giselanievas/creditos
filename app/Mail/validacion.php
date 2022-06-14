@@ -31,6 +31,6 @@ class validacion extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.validarCuenta');
+        return $this->view('emails.validar_cuenta');
     }
 }

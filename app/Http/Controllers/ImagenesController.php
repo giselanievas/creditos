@@ -14,7 +14,7 @@ class ImagenesController extends Controller
      */
     public function index()
     {
-        return view ('linea_de_creditos.agregarGrilla');
+        return view ('linea_de_creditos.agregar_grilla');
    }
 
     /**

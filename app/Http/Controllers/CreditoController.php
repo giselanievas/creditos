@@ -9,7 +9,7 @@ class CreditoController extends Controller
     public function index(){
         $datos=[];
         $datos=TipoLinea::all();
-        return view('linea_de_creditos.tipoDeLinea',compact('datos'));
+        return view('linea_de_creditos.tipo_de_linea',compact('datos'));
     }
 
     public function agregar(Request $request){
@@ -30,7 +30,7 @@ class CreditoController extends Controller
 
     public function editar($id){
         $dato =TipoLinea::findOrFail($id);
-        return view('linea_de_creditos.editarTipoDeLinea', compact('dato'));
+        return view('linea_de_creditos.editar_tipo_de_linea', compact('dato'));
 
     }
     public function update(Request $request, $id){

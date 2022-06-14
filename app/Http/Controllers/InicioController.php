@@ -29,7 +29,7 @@ class InicioController extends Controller
        
         if (! $usuario){
             
-            return view('emails.noencontrado');
+            return view('emails.no_encontrado');
         }else{
       
         $usuario->confirmed=true;
