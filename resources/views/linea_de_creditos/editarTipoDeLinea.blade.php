@@ -1,4 +1,4 @@
-@extends('linea_creditos.inicio_creditos')
+@extends('linea_de_creditos.inicio_creditos')
 
 @section('creditos')
 <div class="container text-center mb-4">
