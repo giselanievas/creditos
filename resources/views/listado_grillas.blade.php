@@ -9,7 +9,7 @@
 <div class="container">
     <div class="container d-flex ">
 
-        <a class="boton rounded-pill btn btn-outline-dark" href="{{route('inicio')}}" role="button">Regresar</a>
+        <a class="boton rounded-pill btn btn-outline-dark" href="{{route('inicio')}}" role="button"><b>Regresar</b></a>
     </div>
     <br>
     <br>

@@ -13,7 +13,7 @@
     <div class="container d-flex justify-content-center">
 
 
-        <a class="boton rounded-pill btn btn-outline-dark" href="{{route('verGrillaDeCredito')}}" role="button">Visualizar Grillas Cargadas</a>
+        <a class="boton rounded-pill btn btn-outline-dark" href="{{route('verGrillaDeCredito')}}" role="button"><b>Visualizar Grillas Cargadas</b></a>
 
         <br>
         <br>
@@ -34,7 +34,7 @@
                     <input type="file" class="form-control" required id="imagen" name="imagen">
                 </div>
                 <br>
-                <button class="btn btn-success" type="submit">Agregar Grilla</button>
+                <button class="btn btn-success" type="submit">Agregar Nueva Grilla</button>
             </div>
 
 

@@ -27,7 +27,7 @@
                     <div class="container d-flex justify-content-center">
                           
                        
-                    <p><a href="http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp"  class="rounded-pill btn btn-outline-light" type="button" target="_blank">Consultar en Veraz</a>.</p>
+                    <p><a href="http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp"  class="rounded-pill btn btn-outline-light" type="button" target="_blank"><b>Consultar en Veraz</b></a>.</p>
                   
                     </div>
               

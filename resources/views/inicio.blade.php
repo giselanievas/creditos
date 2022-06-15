@@ -26,7 +26,7 @@
                     <div class="container d-flex justify-content-center">
                           
                        
-                    <a class="boton rounded-pill btn btn-outline-dark" href="{{route('visualizarGrillas')}}" role="button">Descargar Grillas</a>
+                    <a class="boton rounded-pill btn btn-outline-dark" href="{{route('visualizarGrillas')}}" role="button"><b>Visualizar Grillas</b></a>
                   
                     </div>
 

@@ -7,7 +7,7 @@
 <div class="container">
     <div class="container d-flex ">
 
-        <a class="boton rounded-pill btn btn-outline-dark" href="{{route('grillaDeCredito')}}" role="button">Regresar</a>
+        <a class="boton rounded-pill btn btn-outline-dark" href="{{route('grillaDeCredito')}}" role="button"><b>Regresar</b></a>
     </div>
     <br>
     @if (session('mensaje')=='Se dio de Baja la Grilla')
