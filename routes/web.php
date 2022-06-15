@@ -15,6 +15,7 @@ use \APP\LineaCreditoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -25,9 +26,9 @@ Route::get('/registrado', [App\Http\Controllers\InicioController::class, 'regist
 Route::get('/validar/{id}', [App\Http\Controllers\InicioController::class, 'validar'])->name('validarEmail');
 Route::get('/validado', [App\Http\Controllers\InicioController::class, 'validado'])->name('validado');
 
- //Rutas a las que se permitirá acceso
+//Rutas a las que se permitirá acceso
 Route::group(['middleware' => ['cors']], function () {
-   
+
         ////////////////////////////////////////////  Tipo  de linea de creditos /////////////////////////////////////////////////////////////////
 
         Route::get('/tipodelinea', [App\Http\Controllers\CreditoController::class, 'index'])->name('tipoLineaCredito');
@@ -48,6 +49,12 @@ Route::group(['middleware' => ['cors']], function () {
         //**********************************Grilla de creditos***********************************************************////
         Route::get('/lineacredito/agregargrilla', [App\Http\Controllers\ImagenesController::class, 'index'])->name('grillaDeCredito');
         Route::post('/lineacredito/guardargrilla', [App\Http\Controllers\ImagenesController::class, 'create'])->name('guardarGrillaDeCredito');
+        Route::get('/lineacredito/vergrilla', [App\Http\Controllers\ImagenesController::class, 'show'])->name('verGrillaDeCredito');
+        Route::get('/lineacredito/vergrillaborrar/{id}', [App\Http\Controllers\ImagenesController::class, 'destroy'])->name('grillaDeCreditoDelete');
+
+        ////////////////////////Grillas Publicas//////////////////////////////////////////////////////////////////////////////////////////////
+        Route::get('/vergrillas', [App\Http\Controllers\GrillasController::class, 'index'])->name('visualizarGrillas');
+
 
 
 
@@ -66,14 +73,11 @@ Route::group(['middleware' => ['cors']], function () {
 
         /////////////////////////////////////////formulario////////////////////////////////////////////////////////////////////////////////////////
 
-        Route::post('/formulario', [App\Http\Controllers\FormularioController::class,'store'])->name('formulario');
+        Route::post('/formulario', [App\Http\Controllers\FormularioController::class, 'store'])->name('formulario');
 
 
 
         //////////////////////////////////////////////Ingreso Logueado///////////////////////////////////////////////////////////////////////////////
 
         Route::get('/ingreso', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingreso');
-
-
-
 });

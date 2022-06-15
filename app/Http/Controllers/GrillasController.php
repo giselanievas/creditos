@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 use App\Models\DbImagen;   
 
+
 use Illuminate\Http\Request;
 
-class ImagenesController extends Controller
+class GrillasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,29 +15,19 @@ class ImagenesController extends Controller
      */
     public function index()
     {
-        return view ('linea_de_creditos.agregar_grilla');
-   }
+        
+        $db=new DbImagen();
+        $grillas=$db::all();
+        return view('listado_grillas', compact('grillas'));
+    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        $db=new DbImagen();
-        $imagen=$request->file('imagen');
-        $descripcion=time().'.'.$imagen->getClientOriginalExtension();
-        $destino=public_path('imagen');
-        $request->imagen->move($destino,$descripcion);
-        $db::create([
-            "descripcion"=>$request->descripcion,
-            "imagen"=>'/imagen'.'/'.$descripcion
-
-        ]);
-        return redirect()->route('grillaDeCredito')->with('mensaje','Grilla Agregada Correctamente');
-
-
         //
     }
 
@@ -57,11 +48,9 @@ class ImagenesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $db=new DbImagen();
-        $grillas=$db::all();
-        return view('linea_de_creditos.ver_grilla', compact('grillas'));
+        //
     }
 
     /**
@@ -95,10 +84,6 @@ class ImagenesController extends Controller
      */
     public function destroy($id)
     {
-           $grillaborrar = DbImagen::findOrFail($id);
-        /*    Storage::delete('public/'.$grillaborrar->imagen); */
-           unlink(public_path($grillaborrar->imagen)); 
-           $grillaborrar->delete();
-           return redirect()->route('verGrillaDeCredito')->with('mensaje','Se dio de Baja la Grilla');
+        //
     }
 }
