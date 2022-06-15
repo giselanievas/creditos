@@ -2,8 +2,8 @@
 
 @section('creditos')
 <div class="container text-center mb-4">
-    
-    <h3>Grilla de Créditos</h3>
+  <br>  
+    <h3>Grillas de Créditos</h3>
 </div>
 
 <div class="container">
