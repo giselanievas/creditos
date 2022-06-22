@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\DbImagen;   
-
+use App\Models\DbImagen; 
+use Illuminate\Support\Facades\Storage; 
 use Illuminate\Http\Request;
 
 class ImagenesController extends Controller
@@ -27,13 +27,22 @@ class ImagenesController extends Controller
         $db=new DbImagen();
         $imagen=$request->file('imagen');
         $descripcion=time().'.'.$imagen->getClientOriginalExtension();
-        $destino=public_path('imagen');
+        $uploadSuccess = $request->file('imagen')->store('public/img');
+        $url = Storage::url($uploadSuccess);
+        $db->imagen =  $url;
+        $db->descripcion = $request->descripcion;
+       
+
+
+
+/*         $destino=public_path('imagen');
         $request->imagen->move($destino,$descripcion);
         $db::create([
             "descripcion"=>$request->descripcion,
             "imagen"=>'/imagen'.'/'.$descripcion
 
-        ]);
+        ]); */
+        $db->save();
         return redirect()->route('grillaDeCredito')->with('mensaje','Grilla Agregada Correctamente');
 
 
