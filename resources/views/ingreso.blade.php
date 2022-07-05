@@ -28,7 +28,7 @@
                           
                        
                     <p><a href="http://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp"  class="rounded-pill btn btn-outline-light" type="button" target="_blank"><b>Consultar en Veraz</b></a>.</p>
-                  
+            
                     </div>
               
                
@@ -41,7 +41,17 @@
 <div class="col-3">
     <img id="formitaVerde" src="{{ asset('img/formita verde.svg') }}">
 </div>
-
+<div class="row col-6" >
+    @if ( session('mensaje') )
+    <div class="alert alert-success text-center">{{ session('mensaje') }}</div>
+   @endif
+   <form action="{{ route('consumirApi') }}" method="GET">
+      @csrf
+      <label >CUIL</label>
+      <input type="text" name="cuil" class="form-control">
+      <button type="submit" class="btn btn-primary mt-2"> Enviar datos</button>
+   </form>
+</div>
  
 <section class="cotizador img-fluid" id="cotizador">
     <div class="col-1">

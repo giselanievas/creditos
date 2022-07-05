@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \APP\InicioController;
 use \APP\CreditoContoller;
 use \APP\LineaCreditoController;
+use \APP\VerazAPiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,9 +76,12 @@ Route::group(['middleware' => ['cors']], function () {
 
         Route::post('/formulario', [App\Http\Controllers\FormularioController::class, 'store'])->name('formulario');
 
-
-
         //////////////////////////////////////////////Ingreso Logueado///////////////////////////////////////////////////////////////////////////////
 
         Route::get('/ingreso', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingreso');
+
+        /////////////////////////////////////////Consulta APi Veraz ////////////////////////////////////////////////////////////////////////////////////////
+
+        Route::get('/consultaVeraz', [App\Http\Controllers\VerazAPiController::class, 'index'])->name('consumirApi');
+        
 });
