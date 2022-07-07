@@ -12,8 +12,11 @@ class VerazAPiController extends Controller
         $response=Http::get('https://servicio.infoexperto.com.ar/app/api/v1/informe/apikey/53270e53-9e80-408a-89f6-883402e36dbf/cuit/'.$request->cuil);
         $data = json_decode($response->getBody());
         
+        $estado = $data->estado;
+
+        if ($estado == "OK"){
     
-       /* ($data->datos->scoringLoteo->scoring); */
+      /*   ($data->datos->scoringLoteo->scoring);  */
        $apto = $data->datos->scoringLoteo->scoring;
        
        if ($apto == 5){
@@ -29,4 +32,10 @@ class VerazAPiController extends Controller
     
  
     }
+    else {
+        return redirect('/ingreso')->with('error', 'ok');
+        }
+    
+}
+   
 }

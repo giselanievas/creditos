@@ -24,7 +24,9 @@
         
       )
     </script>
-     @endif
+      
+
+    @endif
     @if (session('apto') =='no')
       
      
@@ -34,6 +36,20 @@
         
         'Comunicate con un comercial',
         'NO se ajusta a nuestra política crediticia para ofrecerle un crédito ',
+        'warning'
+        
+      )
+    </script>
+     @endif
+    @if (session('error') =='ok')
+      
+     
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script>
+      Swal.fire(
+        
+        'Cuil Inexistente',
+        ' ',
         'error'
         
       )
