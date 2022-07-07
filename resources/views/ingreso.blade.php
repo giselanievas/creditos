@@ -1,7 +1,48 @@
 @extends('layouts.welcome')
 
+
+
+
+
+
+
 @section('content')
+
+
 <section id="ingreso">
+
+    @if (session('apto') =='ok')
+      
+     
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script>
+      Swal.fire(
+        
+        'APTO',
+        'Se ajusta a nuestra política crediticia y podemos ofrecerle un crédito ',
+        'success'
+        
+      )
+    </script>
+     @endif
+    @if (session('apto') =='no')
+      
+     
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script>
+      Swal.fire(
+        
+        'Comunicate con un comercial',
+        'NO se ajusta a nuestra política crediticia para ofrecerle un crédito ',
+        'error'
+        
+      )
+    </script>
+     @endif
+  
+
+
+
 <div class="jumbotron pb-5">
     <div class="col-3 py-4 float-end">
                
@@ -126,3 +167,6 @@
 
 
 @endsection
+
+
+ 
