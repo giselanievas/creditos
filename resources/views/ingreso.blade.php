@@ -24,6 +24,7 @@ Swal.fire({
   html:`
   <h4>Completar Solicitud</h4>
    <form method="POST" action="{{route('solicitudCredito')}}">
+    @csrf
     <input type="text" class="form-control"  id="telefono" name="telefono" placeholder="Teléfono Celular">
     <hr>
     <input type="text" class="form-control" id="email" name="email" placeholder="Email">
@@ -41,10 +42,9 @@ Swal.fire({
     <input type="text" class="form-control"  id="monto" name="monto"placeholder="Monto del Préstamo">
     <hr>
     <input type="text" class="form-control"  id="observaciones" name="observaciones" placeholder="Observaciones">
-
+    <button type="submit" class="btn btn-primary boton ">Enviar</button>
    </form>
-  
-  
+    
   `,
   
   showCancelButton: true,

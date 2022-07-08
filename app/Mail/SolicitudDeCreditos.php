@@ -21,9 +21,10 @@ class SolicitudDeCreditos extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($msg)
     {
         //
+        $this->msg = $msg;
     }
 
     /**
@@ -33,6 +34,6 @@ class SolicitudDeCreditos extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('solicitud_credito');
     }
 }
