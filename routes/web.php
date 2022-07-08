@@ -86,7 +86,7 @@ Route::group(['middleware' => ['cors']], function () {
 
         //////////////////////////////////////Solicitud de Credito/////////////////////////////////////////////////////////////
 
-        Route::post('/solicitud', [App\Http\Controllers\SolicitudCreditoController::class, 'store'])->name('solicitudCredito');
+        Route::post('/solicitud/{cuil}', [App\Http\Controllers\SolicitudCreditoController::class, 'store'])->name('solicitudCredito');
 
 
 

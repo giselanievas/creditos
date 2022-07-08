@@ -7,27 +7,14 @@ use Illuminate\Http\Request;
 
 class SolicitudCreditoController extends Controller
 {
-    public function store(Request $request)
+    public function store(Request $request,$cuil)
     {
-     
-        $msg = $request->validate([
-            
-            'telefono' => 'required',
-            'email' => 'required',
-            'fecha' => 'required',
-            'marca' => 'required',
-            'linea' => 'required',
-            'modelo' => 'required',
-            'valor' => 'required',
-            'monto' => 'required',
-            'observaciones' => 'required',
-     
-           
-        ]);
-
-        dd($msg);
+      
+        $msg = $request;
+        $msg->cuil=$cuil;
+       
         Mail::to('giselanievas21@hotmail.com')->send(new SolicitudDeCreditos($msg));
-        return 'Mensaje enviado';
+        return redirect('/ingreso')->with('apto', 'email');
 
 }
 }
