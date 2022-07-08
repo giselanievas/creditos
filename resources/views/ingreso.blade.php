@@ -16,13 +16,50 @@
      
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script>
-      Swal.fire(
-        
-        'APTO',
-        'Se ajusta a nuestra política crediticia y podemos ofrecerle un crédito ',
-        'success'
-        
-      )
+  
+Swal.fire({
+  icon: 'success',  
+  title: 'Apto',
+  text: "",
+  html:`
+  <h4>Completar Solicitud</h4>
+   <form method="POST" action="{{route('solicitudCredito')}}">
+    <input type="text" class="form-control"  id="telefono" name="telefono" placeholder="Teléfono Celular">
+    <hr>
+    <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+    <hr>
+    <input type="text" class="form-control"  id="fecha" name="fecha" placeholder="Año del Auto">
+    <hr>
+    <input type="text" class="form-control"  id="marca" name="marca"placeholder="Marca del Auto">
+    <hr>
+    <input type="text" class="form-control"  id="linea" name="linea"placeholder="Linea del Auto">
+    <hr>
+    <input type="text" class="form-control"  id="modelo" name="modelo"placeholder="Modelo del Auto">
+    <hr>
+    <input type="text" class="form-control"  id="valor" name="valor"placeholder="Valor del Auto">
+    <hr>
+    <input type="text" class="form-control"  id="monto" name="monto"placeholder="Monto del Préstamo">
+    <hr>
+    <input type="text" class="form-control"  id="observaciones" name="observaciones" placeholder="Observaciones">
+
+   </form>
+  
+  
+  `,
+  
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Enviar Solicitud'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Solicitud Enviada',
+      '',
+      'success'
+    )
+  }
+})
     </script>
       
 

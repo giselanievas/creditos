@@ -83,5 +83,13 @@ Route::group(['middleware' => ['cors']], function () {
         /////////////////////////////////////////Consulta APi Veraz ////////////////////////////////////////////////////////////////////////////////////////
 
         Route::get('/consultaVeraz', [App\Http\Controllers\VerazAPiController::class, 'index'])->name('consumirApi');
+
+        //////////////////////////////////////Solicitud de Credito/////////////////////////////////////////////////////////////
+
+        Route::post('/solicitud', [App\Http\Controllers\SolicitudCreditoController::class, 'store'])->name('solicitudCredito');
+
+
+
         
-});
+});     
+
