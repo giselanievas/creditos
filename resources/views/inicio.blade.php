@@ -13,7 +13,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-2 col-md-1"></div>
-                            <div class="col-6 col-md-4">
+                            <div class="col-6 col-md-4 ">
                                 <h1><br>Abriendo<br>Caminos <br></h1>
                                 <h4>Créditos prendarios <br>para autos.<br><br></h4>
                             </div>
