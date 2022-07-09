@@ -1,13 +1,7 @@
 @extends('layouts.welcome')
 
 
-
-
-
-
-
 @section('content')
-
 
 <section id="ingreso">
 
@@ -161,12 +155,12 @@
 
             <img id="formas" src="{{ asset('img/formas grandes.svg') }}">
         </div>
-        <div class="col-9">
-            <div class="col-12 ">
+        <div class="col-9 col-sm-12">
+            <div class="col-12 col-sm-12">
                 <div class="container">
                     <div class="row">
-                        <div class="col-2 col-md-1"></div>
-                        <div class="col-6 col-md-4 mt-4 py-4 px-2">
+                        <div class="col-2 col-md-1 col-sm-12"></div>
+                        <div class="col-6 col-md-4 col-sm-12 mt-4 py-4 px-2">
 
                             <h1 class="px-4" style="color:white; font-family:Montserrat, sans-serif"><i><strong> EL auto que querés, <br>
                                         el plan que necesitás.</strong></i></h1>
@@ -179,27 +173,30 @@
                 <img id="autito" src="{{ asset('img/autito.svg') }}">
                 <br><br><br>
             </div>
-            <div class="container row col-12 container d-flex justify-content-center px-4">
 
-                <form action="{{ route('consumirApi') }}" method="GET">
-                    @csrf
-                    
-                    <div class="col-4 py-4 px-4">
-                        <h5> Consulte el Estado ingresando N° de CUIL</h5>
-                        <input type="text" name="cuil" class="form-control rounded-pill" placeholder="Ingrese aquí N° de Cuil" required><br>
-                        <button type="submit" class="rounded-pill btn btn-outline-light"> Enviar datos</button>
-                    </div>
-                </form>
-
-
-            </div>
 
 
 
 
         </div>
+        <div class="container row col-12 container d-flex justify-content-center px-4">
+
+            <form action="{{ route('consumirApi') }}" method="GET">
+                @csrf
+
+                <div class="col-8 col-md-4 col-sm-12 py-2 px-2">
+                    <h5> Consulte el Estado ingresando N° de CUIL</h5>
+                    <input type="text" name="cuil" class="form-control rounded-pill" placeholder="Ingrese aquí N° de Cuil" required><br>
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <button type="submit" class="rounded-pill btn btn-outline-light"> Enviar datos</button>
+                    </div>
+                </div>
+            </form>
 
 
+        </div>
+
+    </div>
 </section>
 <div class="col-3">
     <img id="formitaVerde" src="{{ asset('img/formita verde.svg') }}">
